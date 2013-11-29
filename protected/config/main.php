@@ -8,6 +8,9 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
+	
+	// 'defaultController'=>'index',
+	'timeZone'=>'Asia/Chongqing',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -70,6 +73,9 @@ return array(
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
+					 'logFile' => 'console.log',
+                    'categories'=>'system.db.*',
+					'enabled'=>false,
 				),
 				// uncomment the following to show log messages on web pages
 				/*
@@ -79,6 +85,12 @@ return array(
 				*/
 			),
 		),
+		'mailer' => array(
+		  'class' => 'application.extensions.mailer.EMailer',
+		  'pathViews' => 'application.views.email',
+		  'pathLayouts' => 'application.views.email.layouts'
+		),
+
 	),
 
 	// application-level parameters that can be accessed
