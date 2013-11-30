@@ -9,6 +9,20 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 -- START BACKUP
 -- -------------------------------------------
 -- -------------------------------------------
+-- TABLE `d_applyuser`
+-- -------------------------------------------
+DROP TABLE IF EXISTS `d_applyuser`;
+CREATE TABLE IF NOT EXISTS `d_applyuser` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `projectid` int(10) NOT NULL DEFAULT '0',
+  `name` varchar(50) DEFAULT NULL,
+  `telphone` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `describe` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -------------------------------------------
 -- TABLE `d_mail`
 -- -------------------------------------------
 DROP TABLE IF EXISTS `d_mail`;
@@ -27,6 +41,19 @@ CREATE TABLE IF NOT EXISTS `d_mail` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- -------------------------------------------
+-- TABLE `d_news`
+-- -------------------------------------------
+DROP TABLE IF EXISTS `d_news`;
+CREATE TABLE IF NOT EXISTS `d_news` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `content` text,
+  `publishDate` datetime DEFAULT NULL,
+  `updatetime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -------------------------------------------
 -- TABLE `d_project`
 -- -------------------------------------------
 DROP TABLE IF EXISTS `d_project`;
@@ -37,10 +64,26 @@ CREATE TABLE IF NOT EXISTS `d_project` (
   `promoter` int(11) DEFAULT '0',
   `personCount` int(11) DEFAULT '0',
   `demand` varchar(500) DEFAULT '0',
+  `startdate` datetime DEFAULT NULL,
   `lastdate` datetime DEFAULT NULL,
   `content` text,
+  `email` varchar(50) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `promoterType` varchar(50) DEFAULT NULL,
   `updatetime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -------------------------------------------
+-- TABLE `d_studioinfo`
+-- -------------------------------------------
+DROP TABLE IF EXISTS `d_studioinfo`;
+CREATE TABLE IF NOT EXISTS `d_studioinfo` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `info` varchar(500) DEFAULT NULL,
+  `sort` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- -------------------------------------------

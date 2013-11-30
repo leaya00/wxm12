@@ -5,6 +5,7 @@
 
 <title>重庆大学创新创业工作坊（首页）</title>
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/style.css" rel="stylesheet" />
+<link href="<?php echo Yii::app()->baseUrl; ?>/css/file.css" rel="stylesheet" />
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/jquery.SuperSlide.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/artDialog/jquery.artDialog.js?skin=default"></script>
@@ -17,7 +18,7 @@
  <!----head开始------>
   <div class="head">
    <div class="head_info">
-    <div class="logo"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/logo.jpg" width="384" height="53" /></a></div>
+    <div class="logo"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/logo.jpg" width="384" height="53" /></a></div>
     <ul class="head_list">
       <li><a href="#">网站首页</a></li>
       <li><a href="#">项目活动</a></li>
@@ -51,6 +52,23 @@
  <!-----head结束----->
  <?php echo $content; ?>
  <!-- foot -->
+ <div class="pub_clear"></div>
+ <div class="link">
+ <div class="link_all">
+  <ul>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
+  </ul>
+ </div>
+</div>
  <div class="bottom">
  <div class="bottom_all">
   <ul class="nave">

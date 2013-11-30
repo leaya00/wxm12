@@ -1,5 +1,7 @@
 <?php
-
+/*
+ * Guest
+ */
 class SiteController extends Controller
 {
 
@@ -9,11 +11,14 @@ class SiteController extends Controller
 
 		$this->render('index');
 	}
-	public function actionPlist()
+	public function actionProject_list()
 	{
-		$this->render('projectlist');
+		$this->render('project_list');
 	}
-
+	public function actionProject_detail()
+	{
+		$this->render('project_detail');
+	}
 	public function actionError()
 	{
 		$this->layout='';

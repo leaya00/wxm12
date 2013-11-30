@@ -1,27 +1,35 @@
 <?php
-
+/*
+ * 普通管理员必须登录
+ */
 class PmController extends Controller
 {
 
 	public function actionIndex()
+	{
+			$this->render('publish');
+	}
+	public function actionTest()
 	{
 		if(isset($_POST["content"])){
 			//写入内容
 		}
 		$this->render('test');
 	}
-
+	
 
 	public function actionckUpload()
 	{
-
+		
 		$message = "";
 		$formname="upload";
 		$path="images/upload/";
 		if ((($_FILES[$formname]["type"] == "image/gif")
 		|| ($_FILES[$formname]["type"] == "image/jpeg")
 		|| ($_FILES[$formname]["type"] == "image/jpg")
-		|| ($_FILES[$formname]["type"] == "image/pjpeg"))
+		|| ($_FILES[$formname]["type"] == "image/pjpeg"
+		 ||$_FILES[$formname]["type"]=="application/x-shockwave-flash")
+		)
 		&& ($_FILES[$formname]["size"] < 1024*1024)){
 			if ($_FILES[$formname]["error"] > 0){
 				echo "上传错误: " . $_FILES["file"]["error"] . "<br />";

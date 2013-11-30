@@ -1,9 +1,12 @@
 <?php
-class ProjectController extends UserController
+/*
+ * 用户必须登录
+ */
+class ProjectController extends Controller
 {
 	
 	public function actionIndex()
 	{
-		$this->render('index');
+		$this->render('apply');
 	}
 }

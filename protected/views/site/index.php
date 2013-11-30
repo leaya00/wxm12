@@ -14,13 +14,13 @@
    <div class="main_show">
    <ul class="show_top">
     <h2>THE ONGOING PROJECTS</h2>
-    <div class="tiaoti"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/show-xt.jpg " width="492" height="2" /></div>
+    <div class="tiaoti"><img src="<?php echo Yii::app()->baseUrl; ?>/images/show-xt.jpg " width="492" height="2" /></div>
     <li>项目正在进行中，若您感兴趣可点击详情观看细节。若您符合要求，可马上报名参与项目。时间有限赶快参与吧！</li>
    </ul>
    <div class="show_content"> 
     <div class="content_bt">
      <div class="content_bt_left">
-      <div class="img"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/logo_pic.jpg"  width="67" height="50" /></div>
+      <div class="img"><img src="<?php echo Yii::app()->baseUrl; ?>/images/logo_pic.jpg"  width="67" height="50" /></div>
        <ul>
         <h2>项目展示</h2>
         <li>PROJECTTS SHOE</li>
@@ -116,42 +116,42 @@
 						<div class="bd">
 							<ul class="infoList">
 								<li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
                                 <li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
                                 <li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
                                 <li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
                                 <li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
                                 <li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
                                 <li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
                                 <li>
-                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ad2.jpg" width="198" height="116" /></a></div>
+                                	<div class="pic"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ad2.jpg" width="198" height="116" /></a></div>
                                     <h3><a href="#">工作室名称</a></h3>
                                     <div class="tex"><a href="#">工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称工作室名称</a></div>
                                 </li>
@@ -173,7 +173,7 @@
     <div class="main_news">
      <ul class="news_top">
       <h2>OUR NEWS</h2>
-      <div class="tiaoti"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/show-xt.jpg " width="492" height="2" /></div>
+      <div class="tiaoti"><img src="<?php echo Yii::app()->baseUrl; ?>/images/show-xt.jpg " width="492" height="2" /></div>
       <li>了解我们的咨询，通过最新话题了解我们平台的成果。我们期待您加入我们，成为我们一份子！</li>
      </ul>
      <div class="news_all"> 	
@@ -217,22 +217,7 @@
  </div>
 
 </div>
-<div class="pub_clear"></div>
-<div class="link">
- <div class="link_all">
-  <ul>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
-  </ul>
- </div>
-</div>
+
+
 
 
