@@ -4,7 +4,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" rel="stylesheet" />
-<title>登录框</title>
+<title>登录</title>
 </head>
 <body>
 <form method="post">

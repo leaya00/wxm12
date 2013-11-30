@@ -8,6 +8,10 @@
 class UserIdentity extends CUserIdentity
 {
 	private $_id;
+	private $_role;
+	public function getRole(){
+		return $this->_role;
+	}
 	public function getId()
 	{
 		return $this->_id;
@@ -29,6 +33,7 @@ class UserIdentity extends CUserIdentity
 		}else{
 			if($this->validatePassword($users['password'],$this->password)){
 				$this->_id=$users['id'];
+				 $this->setState('role', $users['role']);
 				$this->errorCode=self::ERROR_NONE;
 				return true;
 			}

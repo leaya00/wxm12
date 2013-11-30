@@ -7,43 +7,12 @@
  * @version 1.0
  * @author Shiv Charan Panjeta <shiv@toxsl.com> <shivcharan.panjeta@outlook.com>
  */
-class DefaultController extends Controller
+class DefaultController extends AdminController
 {
 
-	/**
-	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
-	 * using two-column layout. See 'protected/views/layouts/column2.php'.
-	 */
 	public $layout='';
 
-	/**
-	 * @return array action filters
-	 */
-	public function filters()
-	{
-		return array(
-				'accessControl', // perform access control for CRUD operations
-		);
-	}
 
-	/**
-	 * Specifies the access control rules.
-	 * This method is used by the 'accessControl' filter.
-	 * @return array access control rules
-	 */
-	public function accessRules()
-	{
-		return array(	 	
-		
-		array('allow', // allow admin user to perform 'admin' and 'delete' actions
-						'actions'=>array('admin','delete','clean','index','view','create','upload', 'download','restore'),
-						'users'=>array('admin'),
-		),
-		array('deny',  // deny all users
-						'users'=>array('*'),
-		),
-		);
-	}
 
 
 	public $tables = array();

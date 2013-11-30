@@ -6,15 +6,28 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
+
 		$this->render('index');
 	}
 	public function actionPlist()
 	{
 		$this->render('projectlist');
 	}
+
+	public function actionError()
+	{
+		$this->layout='';
+	    if($error=Yii::app()->errorHandler->error)
+	    {
+	    	if(Yii::app()->request->isAjaxRequest)
+	    		echo $error['message'];
+	    	else
+	        	$this->render('error', $error);
+	    }
+	}
 	public function actionLogin($type='default')
 	{
-		
+
 		if(!empty($_POST["username"])){
 			$identity=new UserIdentity($_POST["username"],$_POST["password"]);
 			if($identity->authenticate()){
@@ -36,7 +49,7 @@ class SiteController extends Controller
 	}
 	public function actionLogout($type='default')
 	{
-		
+
 		Yii::app()->user->logout();
 		if($type=='default'){
 			$this->redirect();

@@ -4,20 +4,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <title>重庆大学创新创业工作坊（首页）</title>
-<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" rel="stylesheet" />
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery/jquery.SuperSlide.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/artDialog/jquery.artDialog.js?skin=default"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/artDialog/iframeTools.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/home.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/login.js"></script>
+<link href="<?php echo Yii::app()->baseUrl; ?>/css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/artDialog/jquery.artDialog.js?skin=default"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/artDialog/iframeTools.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/home.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/login.js"></script>
 </head>
 <body>
 <div class="all">
  <!----head开始------>
   <div class="head">
    <div class="head_info">
-    <div class="logo"><a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/home/logo.jpg" width="384" height="53" /></a></div>
+    <div class="logo"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/logo.jpg" width="384" height="53" /></a></div>
     <ul class="head_list">
       <li><a href="#">网站首页</a></li>
       <li><a href="#">项目活动</a></li>
