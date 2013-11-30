@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="x-ua-compatible" content="ie=7" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="<?php echo base_url()?>css/style.css" rel="stylesheet" />
+<link href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" rel="stylesheet" />
 <title>登录框</title>
 </head>
 <body>

@@ -9,10 +9,10 @@
 					</div>
 					<div class="bd">
 						<ul>
-							<li><img src="<?php echo base_url()?>/images/home/slide1.jpg" /></li>
-							<li><img src="<?php echo base_url()?>/images/home/slide2.jpg" /></li>
-							<li><img src="<?php echo base_url()?>/images/home/slide3.jpg" /></li>
-                            <li><img src="<?php echo base_url()?>/images/home/slide4.jpg" /></li>
+							<li><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/slide1.jpg" /></li>
+							<li><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/slide2.jpg" /></li>
+							<li><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/slide3.jpg" /></li>
+                            <li><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/slide4.jpg" /></li>
 						</ul>
 					</div>
 				</div>
@@ -35,7 +35,7 @@
      <li><a href="#"><samp>2013-11-27</samp>(4)</a></li>
      <li><a href="#"><samp>2013-11-27</samp>(4)</a></li>
     </ul>
-    <div class="main_all_left_fabu"><a href="#"><img src="<?php echo base_url()?>/images/home/ny_fabu.jpg" width="130" height="40" /></a></div>
+    <div class="main_all_left_fabu"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ny_fabu.jpg" width="130" height="40" /></a></div>
    </div>
    <div class="main_all_right">
     <div class="main_all_right_img"></div>
@@ -133,22 +133,22 @@
    </div>
   <div class="clearfloat"></div>  
  </div>
- <div  class="guangao"><img src="<?php echo base_url()?>/images/home/ny_banner01.jpg" width="1182" height="104" /></div>
+ <div  class="guangao"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/ny_banner01.jpg" width="1182" height="104" /></div>
 </div>
 
 <div class="link">
  <div class="link_all">
   <ul>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo base_url()?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
+   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/home/link_01.jpg" /></a></li>
   </ul>
  </div>
 </div>

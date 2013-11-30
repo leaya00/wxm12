@@ -26,22 +26,22 @@
       <li><a href="#">联系我们</a></li>
     </ul>
  	<ul class="head_login">
- 		<?php if($islogin){?>
+ 		<?php if(!Yii::app()->user->isGuest){?>
          <li>
-         	<a class="menber_name" href="#"><?php echo $username;?></a> |
+         	<a class="menber_name" href="#"><?php echo Yii::app()->user->getName()?></a> |
           	<div class="subnav">
 	            <div class="subnav-inner">
 	              <ul>
 	                <li class=""><a href="#">会员中心</a></li>
 	                <li class=""><a href="#">帐号设置</a></li>
-	                <li class=""><a href="#" onclick="logout('<?php echo 123?>');">退出</a></li>
+	                <li class=""><a href="#" onclick="logout('<?php echo Yii::app()->homeUrl?>');">退出</a></li>
 	              </ul>
 	            </div>
             </div>
         </li>
         <li><a href="#">消息<span>(2)</span></a> |</li>
         <?php }else{?>
-          <li><a href="javascript:void(0);" onclick="login('<?php echo 123?>');">登录</a> |</li>
+          <li><a href="javascript:void(0);" onclick="login('<?php echo Yii::app()->homeUrl?>');">登录</a> |</li>
     	  <li><a href="#">注册</a> </li>
     	<?php }?>
         <li><a href="#">网站首页</a></li>
