@@ -10,7 +10,7 @@ class Globals {
 		//Yii::app()->mailer->Port = "465";
 		Yii::app()->mailer->CharSet = 'UTF-8';
 		Yii::app()->mailer->Username = "31539807";//3
-		Yii::app()->mailer->Password = "q1111111111";//4
+		Yii::app()->mailer->Password = "xxxxxx";//4
 		Yii::app()->mailer->FromName = "testyii";//5
 		//Yii::app()->mailer->AddReplyTo($_POST["email"]);
 		Yii::app()->mailer->AddAddress("31539807@qq.com");//6

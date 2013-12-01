@@ -8,7 +8,12 @@ class PmController extends Controller
 	public function actionIndex()
 	{
 		if(isset($_POST["content"])){
+			$dict=DDict::model()->find('dtype=:dtype', array(':dtype'=>'project_num'));
+			$pnum=$dict->dcode+1;
+			$dict->dcode=$pnum;
+			$dict->save();			
 			$project=new DProject();
+			$project->number=str_pad($pnum,6,'0',STR_PAD_LEFT);
 			$project->content=$_POST["content"];
 			$project->name=$_POST["title"];
 			$project->save();

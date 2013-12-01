@@ -87,10 +87,10 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
-  <tr style="display: none;">
+  <tr >
     <td colspan="2" align="center"><input type="submit" name="button" id="button" value="发布" class="hdfabu">
-        <label>
-          <input type="radio" name="RadioGroup2" value="同意《服务协议》" id="RadioGroup2_0" /><a href="#">同意《服务协议》</a>
+        <label style="display: none;">
+          <input  type="radio" name="RadioGroup2" value="同意《服务协议》" id="RadioGroup2_0" /><a href="#">同意《服务协议》</a>
         </label>
     </td>
     </tr>
