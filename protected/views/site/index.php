@@ -1,7 +1,7 @@
  <div class="banner">
  <div class="banner_all">
   <div class="banner_info">
-   <a href="#"><div class="fabu"></div></a>
+   <a href="<?php echo $this->createUrl('/pm'); ?>"><div class="fabu"></div></a>
    <a href="#"><div class="canjia"></div></a>
    <a href="#"><div class="baoming"></div></a>
   </div>

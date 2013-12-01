@@ -14,14 +14,13 @@
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/login.js"></script>
 </head>
 <body>
-<div class="all">
  <!----head开始------>
   <div class="head">
    <div class="head_info">
     <div class="logo"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/logo.jpg" width="384" height="53" /></a></div>
     <ul class="head_list">
-      <li><a href="#">网站首页</a></li>
-      <li><a href="#">项目活动</a></li>
+      <li><a href="<?php echo Yii::app()->homeUrl; ?>">网站首页</a></li>
+      <li><a href="<?php echo $this->createUrl('/project'); ?>">项目活动</a></li>
       <li><a href="#">工作室展示</a></li>
       <li><a href="#">新闻动态</a></li>
       <li><a href="#">联系我们</a></li>
