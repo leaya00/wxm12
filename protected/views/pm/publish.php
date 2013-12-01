@@ -4,15 +4,17 @@
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/js/My97DatePicker/WdatePicker.js"></script>
  <script>
             $(function($) {
-            	 CKEDITOR.replace( 'content', {
+            	CKEDITOR.replace( 'content', {
                 	 language: 'zh-cn',
                 	 image_previewText:' ',
                 	 filebrowserUploadUrl: '<?php echo $this->createUrl('pm/ckupload');?>'
                 });
+                
             	 $("#publishForm").validate({
             			rules: {
             				email: {email: true},
             				title: "required"
+            				
             			}  
             	});
             	 
@@ -34,12 +36,12 @@
       </tr>
       <tr>
        <td height="58">起止时间：</td>
-       <td><input name="" type="text" onClick="WdatePicker()" class="qzsj">&nbsp;-&nbsp;
-        <input name="" type="text" onClick="WdatePicker()" class="qzsj"></td>
+       <td><input name="startdate" type="text" onClick="WdatePicker()" class="qzsj">&nbsp;-&nbsp;
+        <input name="lastdate" type="text" onClick="WdatePicker()" class="qzsj"></td>
      </tr>
      <tr>
-      <td height="50" valign="top">参与要求：</td>
-      <td><textarea name="demand" cols="" rows="" class="hdms">&nbsp;</textarea></td>
+      <td >参与要求：</td>
+      <td><textarea name="demand" style="height: 60px;" class="hdms">&nbsp;</textarea></td>
      
     </tr>
      <tr>
@@ -49,7 +51,7 @@
     </tr>
     <tr>
      <td height="60">人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数：</td>
-     <td><input name="" id="" type="text" class="renshu"></td>
+     <td><input name="personCount" id="" type="text" class="renshu"></td>
     </tr>
     <tr>
      <td>
@@ -60,12 +62,14 @@
      <td height="54" valign="middle">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：</td>
      <td>
     	<p>
-        <label>
-          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_0" />有效</label>
-        <label>
-          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_1" />无效</label>
-        <label>
-          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_2" />工作室</label>
+    	<?php foreach ($stateDict as $item) {
+    		?>
+    		 <label>
+          <input type="radio" name="state" value="<?php echo $item->dcode?>" id="RadioGroup1_0" /><?php echo $item->dname?></label>
+    		<?php 
+    	}?>
+       
+        
         <br />
       </p>
 	</td>
@@ -74,12 +78,12 @@
     <td>发起人类型：</td>
     <td>
       <p>
-        <label>
-          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_0" />个人</label>
-        <label>
-          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_1" />团队</label>
-        <label>
-          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_2" />工作室</label>
+       <?php foreach ($orgtypeDict as $item) {
+    		?>
+    		 <label>
+          <input type="radio" name="promoterType" value="<?php echo $item->dcode?>" id="RadioGroup1_0" /><?php echo $item->dname?></label>
+    		<?php 
+    	}?>
         <br />
       </p></td>
   </tr>

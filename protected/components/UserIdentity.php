@@ -33,7 +33,7 @@ class UserIdentity extends CUserIdentity
 		}else{
 			if($this->validatePassword($users['password'],$this->password)){
 				$this->_id=$users['id'];
-				 $this->setState('role', $users['role']);
+				$this->setState('role', $users['role']);
 				$this->errorCode=self::ERROR_NONE;
 				return true;
 			}

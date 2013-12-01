@@ -19,5 +19,4 @@ class Globals {
 		echo Yii::app()->mailer->Send();
 	}
 	//		Globals::sendMail();
-
 }

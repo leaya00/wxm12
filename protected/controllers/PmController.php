@@ -2,24 +2,40 @@
 /*
  * 普通管理员必须登录
  */
-class PmController extends Controller
+class PmController extends UserController
 {
 
 	public function actionIndex()
 	{
+
 		if(isset($_POST["content"])){
 			$dict=DDict::model()->find('dtype=:dtype', array(':dtype'=>'project_num'));
 			$pnum=$dict->dcode+1;
 			$dict->dcode=$pnum;
-			$dict->save();			
+			$dict->save();
 			$project=new DProject();
+			//填充uuid
+			$project->id=VUuid::model()->find()->uuid;
 			$project->number=str_pad($pnum,6,'0',STR_PAD_LEFT);
 			$project->content=$_POST["content"];
 			$project->name=$_POST["title"];
-			$project->save();
+			$project->promoter=Yii::app()->user->id;
+			$project->personCount=$_POST["personCount"];
+			$project->startdate=$_POST["startdate"];
+			$project->lastdate=$_POST["lastdate"];
+			$project->email=$_POST["email"];
+			$project->promoterType=$_POST["promoterType"];
+			$project->state=$_POST["state"];
 			
+			$project->save();
+
 		}else{
-			$this->render('publish');
+			$stateDict=DDict::model()->findAll('dtype=:dtype', array(':dtype'=>'state'));
+			$orgtypeDict=DDict::model()->findAll('dtype=:dtype', array(':dtype'=>'orgtype'));
+			$this->render('publish',array(
+				'stateDict'=>$stateDict,
+				'orgtypeDict'=>$orgtypeDict,
+			));
 		}
 	}
 	public function actionTest()
