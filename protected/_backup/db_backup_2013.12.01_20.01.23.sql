@@ -23,6 +23,18 @@ CREATE TABLE IF NOT EXISTS `d_applyuser` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- -------------------------------------------
+-- TABLE `d_dict`
+-- -------------------------------------------
+DROP TABLE IF EXISTS `d_dict`;
+CREATE TABLE IF NOT EXISTS `d_dict` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `dcode` varchar(50) NOT NULL DEFAULT '0',
+  `dname` varchar(50) NOT NULL DEFAULT '0',
+  `dtype` varchar(50) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- -------------------------------------------
 -- TABLE `d_mail`
 -- -------------------------------------------
 DROP TABLE IF EXISTS `d_mail`;
@@ -72,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `d_project` (
   `promoterType` varchar(50) DEFAULT NULL,
   `updatetime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- -------------------------------------------
 -- TABLE `d_studioinfo`
@@ -99,10 +111,40 @@ CREATE TABLE IF NOT EXISTS `d_user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- -------------------------------------------
+-- TABLE DATA d_dict
+-- -------------------------------------------
+INSERT INTO `d_dict` (`id`,`dcode`,`dname`,`dtype`) VALUES
+('1','1','有效','state');
+INSERT INTO `d_dict` (`id`,`dcode`,`dname`,`dtype`) VALUES
+('2','0','无效','state');
+INSERT INTO `d_dict` (`id`,`dcode`,`dname`,`dtype`) VALUES
+('3','1','个人','orgtype');
+INSERT INTO `d_dict` (`id`,`dcode`,`dname`,`dtype`) VALUES
+('4','2','团体','orgtype');
+INSERT INTO `d_dict` (`id`,`dcode`,`dname`,`dtype`) VALUES
+('5','3','工作室','orgtype');
+INSERT INTO `d_dict` (`id`,`dcode`,`dname`,`dtype`) VALUES
+('6','0','项目编号','project_num');
+
+
+
+-- -------------------------------------------
 -- TABLE DATA d_mail
 -- -------------------------------------------
 INSERT INTO `d_mail` (`id`,`smtphost`,`mailform`,`username`,`password`,`mailformname`,`address`,`subject`,`body`,`updatetime`) VALUES
 ('1','xx','xx','xx','xx','xx','xx','xx','xx','0000-00-00 00:00:00');
+
+
+
+-- -------------------------------------------
+-- TABLE DATA d_project
+-- -------------------------------------------
+INSERT INTO `d_project` (`id`,`number`,`name`,`promoter`,`personCount`,`demand`,`startdate`,`lastdate`,`content`,`email`,`state`,`promoterType`,`updatetime`) VALUES
+('2','0','我的一个个项目','0','0','0','0000-00-00 00:00:00','0000-00-00 00:00:00','<p><strong>哈哈哈啊哈<img alt=\"angry\" src=\"http://127.0.0.1/wxm/js/ckeditor/plugins/smiley/images/angry_smile.png\" style=\"height:23px; width:23px\" title=\"angry\" /></strong></p>
+','','','','0000-00-00 00:00:00');
+INSERT INTO `d_project` (`id`,`number`,`name`,`promoter`,`personCount`,`demand`,`startdate`,`lastdate`,`content`,`email`,`state`,`promoterType`,`updatetime`) VALUES
+('3','0','456','0','0','0','0000-00-00 00:00:00','0000-00-00 00:00:00','<p><img alt=\"\" src=\"/wxm/images/upload/Koala.jpg\" style=\"height:768px; width:1024px\" /></p>
+','','','','0000-00-00 00:00:00');
 
 
 

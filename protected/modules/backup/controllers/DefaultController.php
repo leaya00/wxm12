@@ -24,7 +24,7 @@ class DefaultController extends AdminController
 	protected function getPath()
 	{
 		if ( isset ($this->module->path )) $this->_path = $this->module->path;
-		else $this->_path = Yii::app()->basePath .'/../_backup/';
+		else $this->_path = Yii::app()->basePath .'/_backup/';
 
 		if ( !file_exists($this->_path ))
 		{

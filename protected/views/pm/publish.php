@@ -38,6 +38,11 @@
         <input name="" type="text" onClick="WdatePicker()" class="qzsj"></td>
      </tr>
      <tr>
+      <td height="50" valign="top">参与要求：</td>
+      <td><textarea name="demand" cols="" rows="" class="hdms">&nbsp;</textarea></td>
+     
+    </tr>
+     <tr>
       <td height="61" valign="top">活动描述：</td>
       <td><textarea name="content" cols="" rows="" class="hdms">&nbsp;</textarea></td>
      
@@ -53,7 +58,17 @@
     </tr>
     <tr>
      <td height="54" valign="middle">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：</td>
-     <td valign="middle"><select name="" class="zhuangtai"></select></td>
+     <td>
+    	<p>
+        <label>
+          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_0" />有效</label>
+        <label>
+          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_1" />无效</label>
+        <label>
+          <input type="radio" name="RadioGroup1" value="单选" id="RadioGroup1_2" />工作室</label>
+        <br />
+      </p>
+	</td>
    </tr>
     <tr>
     <td>发起人类型：</td>
@@ -72,7 +87,7 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
-  <tr>
+  <tr style="display: none;">
     <td colspan="2" align="center"><input type="submit" name="button" id="button" value="发布" class="hdfabu">
         <label>
           <input type="radio" name="RadioGroup2" value="同意《服务协议》" id="RadioGroup2_0" /><a href="#">同意《服务协议》</a>
