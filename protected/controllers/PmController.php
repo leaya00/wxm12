@@ -7,7 +7,15 @@ class PmController extends Controller
 
 	public function actionIndex()
 	{
+		if(isset($_POST["content"])){
+			$project=new DProject();
+			$project->content=$_POST["content"];
+			$project->name=$_POST["title"];
+			$project->save();
+			
+		}else{
 			$this->render('publish');
+		}
 	}
 	public function actionTest()
 	{
@@ -16,11 +24,11 @@ class PmController extends Controller
 		}
 		$this->render('test');
 	}
-	
+
 
 	public function actionckUpload()
 	{
-		
+
 		$message = "";
 		$formname="upload";
 		$path="images/upload/";
@@ -28,7 +36,7 @@ class PmController extends Controller
 		|| ($_FILES[$formname]["type"] == "image/jpeg")
 		|| ($_FILES[$formname]["type"] == "image/jpg")
 		|| ($_FILES[$formname]["type"] == "image/pjpeg"
-		 ||$_FILES[$formname]["type"]=="application/x-shockwave-flash")
+		||$_FILES[$formname]["type"]=="application/x-shockwave-flash")
 		)
 		&& ($_FILES[$formname]["size"] < 1024*1024)){
 			if ($_FILES[$formname]["error"] > 0){
