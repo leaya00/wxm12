@@ -12,8 +12,14 @@
                 
             	 $("#publishForm").validate({
             			rules: {
-            				email: {email: true},
-            				title: "required"
+            				email: "required email",
+            				startdate: "required",
+                    lastdate: "required",
+                    title: "required",
+                    demand: "required",
+                    personCount: "required number",
+                    content: "required",
+                    state: "required"
             				
             			}  
             	});
@@ -56,7 +62,7 @@
     <tr>
      <td>
                  邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：</td>
-     <td><input  id="email" name="email" type="text" class="youxiang"></td>
+     <td><input   name="email" type="text" class="youxiang"></td>
     </tr>
     <tr>
      <td height="54" valign="middle">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态：</td>
@@ -81,7 +87,8 @@
        <?php foreach ($orgtypeDict as $item) {
     		?>
     		 <label>
-          <input type="radio" name="promoterType" value="<?php echo $item->dcode?>" id="RadioGroup1_0" /><?php echo $item->dname?></label>
+          <input type="radio"  name="promoterType" value="<?php echo $item->dcode?>" id="RadioGroup1_0" /><?php echo $item->dname?>
+        </label>
     		<?php 
     	}?>
         <br />

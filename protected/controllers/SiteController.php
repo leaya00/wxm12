@@ -10,6 +10,7 @@ class SiteController extends Controller
 	{
 
 		$this->render('index');
+
 	}
 	public function actionProject_list()
 	{
@@ -44,11 +45,11 @@ class SiteController extends Controller
 				}
 			}else{
 				$this->layout='';
-				$this->render('login');
+				$this->render('newlogin');
 			}
 		}else{
 			$this->layout='';
-			$this->render('login');
+			$this->render('newlogin');
 		}
 
 	}
