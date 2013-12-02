@@ -28,3 +28,6 @@
             	            $("#publishForm").submit();
             	        }    
             	});
+				
+				
+				http://getbootstrap.com/2.3.2/examples/signin.html
