@@ -23,7 +23,7 @@ class UserIdentity extends CUserIdentity
 		return $command->queryRow();
 	}
 	public function validatePassword($pwd,$newpwd){
-		return $pwd==$newpwd;
+		return strtolower($pwd)==strtolower(md5($newpwd));
 	}
 	public function authenticate()
 	{

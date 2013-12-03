@@ -1,4 +1,4 @@
- <!-------banner 开始----------->
+ <!--banner 开始-->
  <div class="banner_ny">
   <div class="banner_ny01">
    <div id="demoContent">
@@ -21,7 +21,7 @@
     </div>
   </div>
  </div>
-<!-------banner 结束----------->
+<!--banner 结束-->
 
 <div class="main">
   <div class="main_all">
@@ -49,69 +49,21 @@
       <li class="ny_mlist06"><span>截至时间</span></li>
       <li class="ny_mlist07"><span>我要参与</span></li>
       </ul>
-     <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="ny_mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="ny_mlist03"><span>李小二</span></li>
-       <li class="ny_mlist04"><span>123</span></li>
-       <li class="ny_mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="ny_mlist06"><span>2013-11-30</span></li>
+    <?php 
+      foreach($project_list as $item){
+    ?>
+    <ul class="ny_jp_list">
+       <li class="ny_mlist01"><a href="#" class="blue_color"><?php echo $item->number;?> </a></li>
+       <li class="ny_mlist02"><span class="org_color"><?php echo $item->name;?>  </span></li>
+       <li class="ny_mlist03"><span><?php echo $item->promoterName->username;?> </span></li>
+       <li class="ny_mlist04"><span><?php echo $item->personCount;?></span></li>
+       <li class="ny_mlist05"><span><?php echo $item->demand;?></span></li>
+       <li class="ny_mlist06"><span><?php echo date('Y-m-d',strtotime($item->lastdate));?></span></li>
        <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
        </ul>
-      <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="ny_mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="ny_mlist03"><span>李小二</span></li>
-       <li class="ny_mlist04"><span>123</span></li>
-       <li class="ny_mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="ny_mlist06"><span>2013-11-30</span></li>
-       <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-       </ul> 
-      <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="ny_mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="ny_mlist03"><span>李小二</span></li>
-       <li class="ny_mlist04"><span>123</span></li>
-       <li class="ny_mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="ny_mlist06"><span>2013-11-30</span></li>
-       <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-       </ul> 
-      <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="ny_mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="ny_mlist03"><span>李小二</span></li>
-       <li class="ny_mlist04"><span>123</span></li>
-       <li class="ny_mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="ny_mlist06"><span>2013-11-30</span></li>
-       <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-      </ul>
-      <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="ny_mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="ny_mlist03"><span>李小二</span></li>
-       <li class="ny_mlist04"><span>123</span></li>
-       <li class="ny_mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="ny_mlist06"><span>2013-11-30</span></li>
-       <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-       </ul>
-       <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="ny_mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="ny_mlist03"><span>李小二</span></li>
-       <li class="ny_mlist04"><span>123</span></li>
-       <li class="ny_mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="ny_mlist06"><span>2013-11-30</span></li>
-       <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-       </ul>
-       <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="ny_mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="ny_mlist03"><span>李小二</span></li>
-       <li class="ny_mlist04"><span>123</span></li>
-       <li class="ny_mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="ny_mlist06"><span>2013-11-30</span></li>
-       <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-       </ul>
+    <?php }?>
+     
+      
      <!--分页-->
         <div class="msearch_fenye">
           <table width="1000" style="" border="0" cellpadding="0" cellspacing="0">
@@ -134,23 +86,6 @@
   <div class="clearfloat"></div>  
  </div>
  <div  class="guangao"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ny_banner01.jpg" width="1182" height="104" /></div>
-</div>
-
-<div class="link">
- <div class="link_all">
-  <ul>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-   <li><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/link_01.jpg" /></a></li>
-  </ul>
- </div>
 </div>
 
 

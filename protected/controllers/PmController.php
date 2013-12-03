@@ -19,6 +19,7 @@ class PmController extends UserController
 			$project->number=str_pad($pnum,6,'0',STR_PAD_LEFT);
 			$project->content=$_POST["content"];
 			$project->name=$_POST["title"];
+			$project->demand=$_POST["demand"];
 			$project->promoter=Yii::app()->user->id;
 			$project->personCount=$_POST["personCount"];
 			$project->startdate=$_POST["startdate"];

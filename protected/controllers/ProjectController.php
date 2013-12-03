@@ -7,6 +7,6 @@ class ProjectController extends Controller
 	
 	public function actionIndex()
 	{
-		$this->render('apply');
+		$this->render('index');
 	}
 }

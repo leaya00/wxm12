@@ -1,31 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "d_project".
+ * This is the model class for table "d_user".
  *
- * The followings are the available columns in table 'd_project':
- * @property integer $id
- * @property string $number
- * @property string $name
- * @property integer $promoter
- * @property integer $personCount
- * @property string $demand
- * @property string $startdate
- * @property string $lastdate
- * @property string $content
- * @property string $email
- * @property string $state
- * @property string $promoterType
- * @property string $updatetime
+ * The followings are the available columns in table 'd_user':
+ * @property string $id
+ * @property string $username
+ * @property string $password
+ * @property string $role
  */
-class DProject extends CActiveRecord
+class DUser extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'd_project';
+		return 'd_user';
 	}
 
 	/**
@@ -36,7 +27,12 @@ class DProject extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			
+			array('id, username, password', 'required'),
+			array('id', 'length', 'max'=>36),
+			array('username, password, role', 'length', 'max'=>50),
+			// The following rule is used by search().
+			// @todo Please remove those attributes that should not be searched.
+			array('id, username, password, role', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,7 +44,6 @@ class DProject extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			 'promoterName'=>array(self::BELONGS_TO, 'DUser', 'promoter'),
 		);
 	}
 
@@ -59,18 +54,9 @@ class DProject extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'number' => 'Number',
-			'name' => 'Name',
-			'promoter' => 'Promoter',
-			'personCount' => 'Person Count',
-			'demand' => 'Demand',
-			'startdate' => 'Startdate',
-			'lastdate' => 'Lastdate',
-			'content' => 'Content',
-			'email' => 'Email',
-			'state' => 'State',
-			'promoterType' => 'Promoter Type',
-			'updatetime' => 'Updatetime',
+			'username' => 'Username',
+			'password' => 'Password',
+			'role' => 'Role',
 		);
 	}
 
@@ -92,19 +78,10 @@ class DProject extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('number',$this->number,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('promoter',$this->promoter);
-		$criteria->compare('personCount',$this->personCount);
-		$criteria->compare('demand',$this->demand,true);
-		$criteria->compare('startdate',$this->startdate,true);
-		$criteria->compare('lastdate',$this->lastdate,true);
-		$criteria->compare('content',$this->content,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('state',$this->state,true);
-		$criteria->compare('promoterType',$this->promoterType,true);
-		$criteria->compare('updatetime',$this->updatetime,true);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('role',$this->role,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -115,13 +92,10 @@ class DProject extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return DProject the static model class
+	 * @return DUser the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-	/*
-	 * 产生编号 select LPAD(4+1,5,'0')
-	 */
 }

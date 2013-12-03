@@ -8,13 +8,13 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-
 		$this->render('index');
 
 	}
 	public function actionProject_list()
 	{
-		$this->render('project_list');
+		$project_list=DProject::model()->findAll();
+		$this->render('project_list',array('project_list' => $project_list));
 	}
 	public function actionProject_detail()
 	{
