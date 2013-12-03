@@ -35,7 +35,7 @@
      <li><a href="#"><samp>2013-11-27</samp>(4)</a></li>
      <li><a href="#"><samp>2013-11-27</samp>(4)</a></li>
     </ul>
-    <div class="main_all_left_fabu"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ny_fabu.jpg" width="130" height="40" /></a></div>
+    <div class="main_all_left_fabu"><a href="<?php echo $this->createUrl('pm/index'); ?>"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ny_fabu.jpg" width="130" height="40" /></a></div>
    </div>
    <div class="main_all_right">
     <div class="main_all_right_img"></div>

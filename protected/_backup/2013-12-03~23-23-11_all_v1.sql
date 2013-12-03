@@ -4,7 +4,7 @@
 -- http://www.yanue.net 
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2013 年  12 月 01 日 21:17
+-- 生成日期: 2013 年  12 月 03 日 23:23
 -- MySQL版本: 5.5.27
 -- PHP 版本: 5.4.7
 
@@ -55,7 +55,7 @@ INSERT INTO `d_dict` VALUES('2','0','无效','state');
 INSERT INTO `d_dict` VALUES('3','1','个人','orgtype');
 INSERT INTO `d_dict` VALUES('4','2','团体','orgtype');
 INSERT INTO `d_dict` VALUES('5','3','工作室','orgtype');
-INSERT INTO `d_dict` VALUES('6','9','项目编号','project_num');
+INSERT INTO `d_dict` VALUES('6','18','项目编号','project_num');
 --
 -- 表的结构d_mail
 --
@@ -124,7 +124,8 @@ CREATE TABLE `d_project` (
 -- 转存表中的数据 d_project
 --
 
-INSERT INTO `d_project` VALUES('365f98f7-5a88-11e3-b2d8-90e6ba57d19d','000009','sdfsdf','8','0','0','0000-00-00 00:00:00','0000-00-00 00:00:00','','','','','0000-00-00 00:00:00');
+INSERT INTO `d_project` VALUES('333','000018','项目1','8','3',' 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-03 21:12:54');
+INSERT INTO `d_project` VALUES('49841a44-5c15-11e3-b6b2-90e6ba57d19d','000018','项目1','8','3',' 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-03 21:12:54');
 --
 -- 表的结构d_studioinfo
 --
@@ -159,9 +160,9 @@ CREATE TABLE `d_user` (
 -- 转存表中的数据 d_user
 --
 
-INSERT INTO `d_user` VALUES('10','p1','1','manager');
-INSERT INTO `d_user` VALUES('8','admin','1','admin');
-INSERT INTO `d_user` VALUES('9','user1','1','user');
+INSERT INTO `d_user` VALUES('10','p1','C4CA4238A0B923820DCC509A6F75849B','manager');
+INSERT INTO `d_user` VALUES('8','admin','C4CA4238A0B923820DCC509A6F75849B','admin');
+INSERT INTO `d_user` VALUES('9','user1','C4CA4238A0B923820DCC509A6F75849B','user');
 --
 -- 表的结构v_uuid
 --
@@ -173,4 +174,4 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- 转存表中的数据 v_uuid
 --
 
-INSERT INTO `v_uuid` VALUES('fc7043c2-5a8a-11e3-b2d8-90e6ba57d19d');
+INSERT INTO `v_uuid` VALUES('d1b339b2-5c2e-11e3-b6b2-90e6ba57d19d');

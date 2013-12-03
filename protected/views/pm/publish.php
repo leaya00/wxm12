@@ -19,8 +19,8 @@
                     demand: "required",
                     personCount: "required number",
                     content: "required",
-                    state: "required"
-            				
+                    state: "required",
+            				promoterType:"required"
             			}  
             	});
             	 
@@ -87,7 +87,7 @@
        <?php foreach ($orgtypeDict as $item) {
     		?>
     		 <label>
-          <input type="radio"  name="promoterType" value="<?php echo $item->dcode?>" id="RadioGroup1_0" /><?php echo $item->dname?>
+          <input type="radio"  name="promoterType" value="<?php echo $item->dcode?>" /><?php echo $item->dname?>
         </label>
     		<?php 
     	}?>

@@ -7,10 +7,10 @@
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/style.css" rel="stylesheet" />
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/file.css" rel="stylesheet" />
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/jquery.SuperSlide.js"></script>
+
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/artDialog/jquery.artDialog.js?skin=default"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/artDialog/iframeTools.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/home.js"></script>
+
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/login.js"></script>
 </head>
 <body>
@@ -20,7 +20,7 @@
     <div class="logo"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/logo.jpg" width="384" height="53" /></a></div>
     <ul class="head_list">
       <li><a href="<?php echo Yii::app()->homeUrl; ?>">网站首页</a></li>
-      <li><a href="<?php echo $this->createUrl('/project'); ?>">项目活动</a></li>
+      <li><a href="<?php echo $this->createUrl('site/project_list'); ?>">项目活动</a></li>
       <li><a href="#">工作室展示</a></li>
       <li><a href="#">新闻动态</a></li>
       <li><a href="#">联系我们</a></li>

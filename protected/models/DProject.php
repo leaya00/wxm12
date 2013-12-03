@@ -48,7 +48,8 @@ class DProject extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			 'promoterName'=>array(self::BELONGS_TO, 'DUser', 'promoter'),
+			 'promoterName'=>array(self::BELONGS_TO, 'DUser', array('promoter'=>'id')),
+			 'promoterTypeName'=>array(self::BELONGS_TO, 'DDict', array("promoterType"=>"dcode"),'on'=>'dtype="orgtype"'),
 		);
 	}
 

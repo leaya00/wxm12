@@ -1,3 +1,5 @@
+ <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/jquery.SuperSlide.js"></script>
+ <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/home.js"></script>
  <div class="banner">
  <div class="banner_all">
   <div class="banner_info">

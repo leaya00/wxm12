@@ -16,9 +16,15 @@ class SiteController extends Controller
 		$project_list=DProject::model()->findAll();
 		$this->render('project_list',array('project_list' => $project_list));
 	}
-	public function actionProject_detail()
+
+	public function actionProject_detail($project_id='xx')
 	{
-		$this->render('project_detail');
+
+		 if($project_id=='xx'){
+			echo "error";
+		}else{
+			$this->render('project_detail');
+		}
 	}
 	public function actionError()
 	{
