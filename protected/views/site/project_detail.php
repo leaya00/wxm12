@@ -31,17 +31,17 @@
     <div class="main_all_right_img"></div>
     <div class="ny_lb_zzy">
       <div class="ny_lb_zzy_top">
-       <h2>title</h2>
-       <p>参与要求</p>
-       <h3>编号001</h3>
+       <h2><?php echo $item['name']; ?></h2>
+       <p><?php echo $item['demand']; ?></p>
+       <h3><?php echo $item['number']; ?></h3>
       </div>
       <div class="ny_lb_zzy_nr">
-       <p>  content</p>
+       <p>  <?php echo $item['content']; ?></p>
       </div>
       <div class="ny_lb_zzy_bottom">
        <ul>
-        <li><samp>发起人</samp>工作室名称</li>
-        <li><samp>截止日期</samp>2014.01.01</li>
+        <li><samp>发起人</samp><?php echo $item['promoterName']; ?></li>
+        <li><samp>截止日期</samp><?php echo date('Y-m-d',strtotime($item['lastdate'])); ?></li>
        </ul>
        <div class="ny_lb_zzy_bottom_img"><a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/images/ny_pic02.jpg" width="76" height="33" /></a></div>
       </div>

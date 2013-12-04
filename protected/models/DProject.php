@@ -48,8 +48,7 @@ class DProject extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			 'promoterName'=>array(self::BELONGS_TO, 'DUser', array('promoter'=>'id')),
-			 'promoterTypeName'=>array(self::BELONGS_TO, 'DDict', array("promoterType"=>"dcode"),'on'=>'dtype="orgtype"'),
+			
 		);
 	}
 
@@ -112,6 +111,36 @@ class DProject extends CActiveRecord
 		));
 	}
 
+	private $basesql="select
+		 d_project.*,d_user.username as promoterName,d_dict.dname as  promoterTypeName
+		 from d_project
+		 left join d_user on d_project.promoter=d_user.id
+		  left join d_dict on d_project.promoterType=d_dict.dcode and d_dict.dtype='orgtype' ";
+	public function pageFind($tj="1=1"){
+		$sql=$this->basesql." where $tj";
+		return Yii::app()->db->createCommand($sql)->queryAll();
+	}
+	/*
+	分页查询
+	*/
+	public function pageingFind($tj,$pagenum,$pagesize){
+		$start=($pagenum-1)*$pagesize;
+		$limit_sql="limit $start,$pagesize";
+		$sql=$this->basesql." where $tj";
+		$result=array();
+		//总数		
+		$result['count']=Yii::app()->db->createCommand("select count(1) from ($sql) x")->queryScalar();
+		$result['pageMax']=ceil($result['count'] / $pagesize);
+		//$result['data']=Yii::app()->db->createCommand($sql.$limit_sql)->queryAll();
+
+		return $result;
+	}
+	public function FindByid($id){
+		$sql=$this->basesql."where d_project.id=:id";
+		$command= Yii::app()->db->createCommand($sql);
+		$command->bindParam(":id",$id,PDO::PARAM_STR);
+		return $command->queryAll();
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
@@ -122,7 +151,5 @@ class DProject extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	/*
-	 * 产生编号 select LPAD(4+1,5,'0')
-	 */
+	
 }

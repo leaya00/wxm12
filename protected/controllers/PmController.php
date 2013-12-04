@@ -16,6 +16,7 @@ class PmController extends UserController
 			$project=new DProject();
 			//填充uuid
 			$project->id=VUuid::model()->find()->uuid;
+			//产生编号
 			$project->number=str_pad($pnum,6,'0',STR_PAD_LEFT);
 			$project->content=$_POST["content"];
 			$project->name=$_POST["title"];

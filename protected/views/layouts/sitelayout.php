@@ -6,8 +6,9 @@
 <title>重庆大学创新创业工作坊（首页）</title>
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/style.css" rel="stylesheet" />
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/file.css" rel="stylesheet" />
-<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
 
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/jquery.SuperSlide.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/artDialog/jquery.artDialog.js?skin=default"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/artDialog/iframeTools.js"></script>
 

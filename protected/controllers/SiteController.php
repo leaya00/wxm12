@@ -8,23 +8,28 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-		$this->render('index');
+		//$this->render('index');
+		print_r(DProject::model()->pageingFind("1=1 ",1,2));
 
 	}
 	public function actionProject_list()
 	{
-		$project_list=DProject::model()->findAll();
+		$project_list=DProject::model()->pageFind();
 		$this->render('project_list',array('project_list' => $project_list));
 	}
 
-	public function actionProject_detail($project_id='xx')
+	public function actionProject_detail($project_id=null)
 	{
 
-		 if($project_id=='xx'){
-			//echo "error";
+		 if($project_id==null){
 			$this->render('index');
 		}else{
-			$this->render('project_detail');
+			$project=DProject::model()->FindByid($project_id);
+			if(count($project)!=1){
+				$this->render('index');
+				return;
+			}
+			$this->render('project_detail',array("item"=>$project[0]));
 		}
 	}
 	public function actionError()

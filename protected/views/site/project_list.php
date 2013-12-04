@@ -53,14 +53,16 @@
       foreach($project_list as $item){
     ?>
     <ul class="ny_jp_list">
-       <li class="ny_mlist01"><a href="#" class="blue_color"><?php echo $item->number;?> </a></li>
-       <li class="ny_mlist02"><span class="org_color"><?php echo $item->name;?>  </span></li>
-       <li class="ny_mlist03"><span><?php echo $item->promoterName->username;?> </span></li>
-       <li class="ny_mlist04"><span><?php echo $item->personCount;?></span></li>
-       <li class="ny_mlist05"><span><?php echo $item->demand;?></span></li>
-       <li class="ny_mlist06"><span><?php echo date('Y-m-d',strtotime($item->lastdate));?></span></li>
-       <li class="ny_mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-       </ul>
+       <li class="ny_mlist01"><a href="#" class="blue_color"><?php echo $item['number'];?> </a></li>
+       <li class="ny_mlist02"><span class="org_color"><?php echo $item['name'];?>  </span></li>
+       <li class="ny_mlist03"><span><?php echo $item['promoterName'];?> </span></li>
+       <li class="ny_mlist04"><span><?php echo $item['personCount'];?></span></li>
+       <li class="ny_mlist05"><span><?php echo $item['demand'];?></span></li>
+       <li class="ny_mlist06"><span><?php echo date('Y-m-d',strtotime($item['lastdate']));?></span></li>
+       <li class="ny_mlist07">
+          <a href="<?php echo $this->createUrl("site/project_detail",array("project_id"=>$item['id']))?>"  target="_blank" class="chakan">查看详情</a>
+          <a href="#" class="chakan">马上参加</a>         
+      </li>     
     <?php }?>
      
       
@@ -71,7 +73,14 @@
               <td align="center" height="32" valign="middle"><table border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td><div class="fenye_con2">
-                        <a class="width_60 fenye_home" href="#">首页</a> <a class="width_60" href="#">上一页</a> <a href="#">1</a> <a href="#">2</a> <span>3</span> <a href="#">4</a> <a href="#">5</a> <a class="width_60" href="#">下一页</a> <a class="width_60" href="#">末页</a>
+                        <a class="width_60 fenye_home" href="#">首页</a> <a class="width_60" href="#">上一页</a> 
+                        <a href="#">1</a> 
+                        <a href="#">2</a> 
+                        <span>3</span> 
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a class="width_60" href="#">下一页</a> 
+                        <a class="width_60" href="#">末页</a>
                         <input name="" class="tz_text" type="text" />
                         <input class="go_tijiao" name="" value="Go" type="submit" />
                       </div></td>
