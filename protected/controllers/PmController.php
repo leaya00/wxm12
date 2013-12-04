@@ -34,7 +34,7 @@ class PmController extends UserController
 		}else{
 			$stateDict=DDict::model()->findAll('dtype=:dtype', array(':dtype'=>'state'));
 			$orgtypeDict=DDict::model()->findAll('dtype=:dtype', array(':dtype'=>'orgtype'));
-			$this->render('publish',array(
+			$this->render('/project/publish',array(
 				'stateDict'=>$stateDict,
 				'orgtypeDict'=>$orgtypeDict,
 			));

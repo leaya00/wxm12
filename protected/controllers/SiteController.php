@@ -15,7 +15,7 @@ class SiteController extends Controller
 	public function actionProject_list()
 	{
 		$project_list=DProject::model()->pageFind();
-		$this->render('project_list',array('project_list' => $project_list));
+		$this->render('/project/list',array('project_list' => $project_list));
 	}
 
 	public function actionProject_detail($project_id=null)
@@ -29,20 +29,27 @@ class SiteController extends Controller
 				$this->render('index');
 				return;
 			}
-			$this->render('project_detail',array("item"=>$project[0]));
+			$this->render('/project/detail',array("item"=>$project[0]));
 		}
 	}
-	public function actionError()
-	{
-		$this->layout='';
-	    if($error=Yii::app()->errorHandler->error)
-	    {
-	    	if(Yii::app()->request->isAjaxRequest)
-	    		echo $error['message'];
-	    	else
-	        	$this->render('error', $error);
-	    }
-	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
+		登录
+	*/
+
 	public function actionLogin($type='default')
 	{
 
@@ -75,4 +82,20 @@ class SiteController extends Controller
 			echo "<script> parent.location.reload();</script>";
 		}
 	}
+	
+	/*
+	错误页
+	*/
+	public function actionError()
+	{
+		$this->layout='';
+	    if($error=Yii::app()->errorHandler->error)
+	    {
+	    	if(Yii::app()->request->isAjaxRequest)
+	    		echo $error['message'];
+	    	else
+	        	$this->render('error', $error);
+	    }
+	}
+
 }
