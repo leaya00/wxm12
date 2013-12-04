@@ -104,7 +104,7 @@
    <div class="main_work">
     <ul class="work_top">
     <h2>OUR WORKSSHOPS</h2>
-    <div class="tiaoti"><img src="images/home/show-xt.jpg " width="492" height="2" /></div>
+    <div class="tiaoti"><img src="<?php echo Yii::app()->baseUrl; ?>/images/show-xt.jpg " width="492" height="2" /></div>
     <li>参与咱们工作坊的各工作室介绍，快来了解下您的工作环境吧。选择您喜欢的工作环境，了解您的同仁！</li>
    </ul>
    

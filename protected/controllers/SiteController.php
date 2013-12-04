@@ -21,7 +21,8 @@ class SiteController extends Controller
 	{
 
 		 if($project_id=='xx'){
-			echo "error";
+			//echo "error";
+			$this->render('index');
 		}else{
 			$this->render('project_detail');
 		}

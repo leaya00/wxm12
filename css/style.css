@@ -234,7 +234,7 @@ body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; paddin
 .leftLoop .hd .next{ background:url("demoEffect/images/icoRight.gif") no-repeat;  } 
 .leftLoop .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px;  } 
 .leftLoop .hd ul li{ position:relative; _display:inline; float:left;  width:10px; height:10px; overflow:hidden; background:#ccc; margin-right:10px; text-indent:-999px; cursor:pointer; 
-    -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; behavior: url(PIE.htc);} 
+    -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; } 
 .leftLoop .hd ul li.on{ background:#f00;  } 
 .leftLoop .bd{ padding:10px;   } 
 .leftLoop .bd ul{ overflow:hidden; zoom:1; } 
@@ -257,7 +257,7 @@ body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; paddin
 .leftLoop .hd .next{ background:url("../images/icoRight.gif") no-repeat;  }
 .leftLoop .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px;  }
 .leftLoop .hd ul li{ position:relative; _display:inline; float:left;  width:10px; height:10px; overflow:hidden; background:#ccc; margin-right:10px; text-indent:-999px; cursor:pointer;
-	-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; behavior: url(../PIE.htc);}
+	-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
 .leftLoop .hd ul li.on{ background:#f00;  }
 .leftLoop .bd{ padding:10px;   }
 .leftLoop .bd ul{ overflow:hidden; zoom:1; }
