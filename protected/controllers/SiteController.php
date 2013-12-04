@@ -33,8 +33,18 @@ class SiteController extends Controller
 		}
 	}
 
+	public function actionNews_list(){
 
+		$this->render('/news/list');		
+	}
+	public function actionStdio_list(){
 
+		$this->render('/stdio/list');		
+	}
+	public function actionConactus(){
+
+		$this->render('contactus');		
+	}
 
 
 

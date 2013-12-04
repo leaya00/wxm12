@@ -22,9 +22,9 @@
     <ul class="head_list">
       <li><a href="<?php echo Yii::app()->homeUrl; ?>">网站首页</a></li>
       <li><a href="<?php echo $this->createUrl('site/project_list'); ?>">项目活动</a></li>
-      <li><a href="#">工作室展示</a></li>
-      <li><a href="#">新闻动态</a></li>
-      <li><a href="#">联系我们</a></li>
+      <li><a href="<?php echo $this->createUrl('site/stdio_list'); ?>">工作室展示</a></li>
+      <li><a href="<?php echo $this->createUrl('site/news_list'); ?>">新闻动态</a></li>
+      <li><a href="<?php echo $this->createUrl('site/conactus'); ?>">联系我们</a></li>
     </ul>
  	<ul class="head_login">
  		<?php if(!Yii::app()->user->isGuest){?>
