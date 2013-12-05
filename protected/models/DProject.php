@@ -121,17 +121,21 @@ class DProject extends CActiveRecord
 		return Yii::app()->db->createCommand($sql)->queryAll();
 	}
 	/*
-	分页查询
+	分页查询   第一页为0
 	*/
-	public function pageingFind($tj,$pagenum,$pagesize){
-		$start=($pagenum-1)*$pagesize;
-		$limit_sql="limit $start,$pagesize";
+	public function pageingFind($tj,$currentPage,$pageSize){
+		$start=($currentPage)*$pageSize;
+		$limit_sql=" limit $start,$pageSize ";
 		$sql=$this->basesql." where $tj";
 		$result=array();
 		//总数		
-		$result['count']=Yii::app()->db->createCommand("select count(1) from ($sql) x")->queryScalar();
-		$result['pageMax']=ceil($result['count'] / $pagesize);
-		//$result['data']=Yii::app()->db->createCommand($sql.$limit_sql)->queryAll();
+		$count=Yii::app()->db->createCommand("select count(1) from ($sql) x")->queryScalar();		
+		$result['data']=Yii::app()->db->createCommand($sql.$limit_sql)->queryAll();
+
+		Yii::import('application.vendor.*');
+		require_once('pageHelper.php');
+		$mypage=new PageHelper(5,$count,$currentPage,$pageSize);
+		$result['page']=$mypage->createPageButtons();
 
 		return $result;
 	}

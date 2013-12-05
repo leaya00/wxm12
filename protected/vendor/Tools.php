@@ -1,7 +1,7 @@
 
 <?php
 //Yii::import('application.vendors.*');
-//require_once('Zend/Search/Lucene.php');
+//require_once('Tools.php');
 class Tools {
 	
 
@@ -21,4 +21,5 @@ class Tools {
 		}
 		return  $result;
 	}
+	
 }

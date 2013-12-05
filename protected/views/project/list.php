@@ -50,7 +50,7 @@
       <li class="ny_mlist07"><span>我要参与</span></li>
       </ul>
     <?php 
-      foreach($project_list as $item){
+      foreach($project_list['data'] as $item){
     ?>
     <ul class="ny_jp_list">
        <li class="ny_mlist01"><a href="#" class="blue_color"><?php echo $item['number'];?> </a></li>
@@ -65,8 +65,48 @@
       </li>     
     <?php }?>
      
-      
-     <!--分页-->
+     <?php print_r($project_list['page']) ?>
+      <!--分页-->
+        <div class="msearch_fenye">
+          <table width="1000" style="" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" height="32" valign="middle"><table border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td><div class="fenye_con2">
+                        <?php 
+                            foreach($project_list['page'] as $item){
+                        ?>
+                        <?php if($item['type']=='f' && !$item['hidden'] ){?>
+                           <a class="width_60 fenye_home" href="#">首页</a>  
+                        <?php }?>
+                        <?php if($item['type']=='p' && !$item['hidden'] ){?>
+                            <a class="width_60" href="#">上一页</a> 
+                        <?php }?>
+                        <?php if($item['type']=='page' ){
+                            if($item['selected']){
+                        ?>
+                           <span><?php echo $item['label']?></span> 
+                        <?php
+                            }else{
+                        ?>
+                           <a href="#"><?php echo $item['label']?></a> 
+                        <?php }}?>
+                        <?php if($item['type']=='n' && !$item['hidden']){?>
+                           <a class="width_60" href="#">下一页</a> 
+                        <?php }?>
+                        <?php if($item['type']=='l' && !$item['hidden']){?>
+                           <a class="width_60" href="#">末页</a>
+                        <?php }?>
+                        <?php }?>
+                        
+                      </div></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+        </div>
+        <!--分页 end-->
+     <!--分页
         <div class="msearch_fenye">
           <table width="1000" style="" border="0" cellpadding="0" cellspacing="0">
             <tr>
@@ -89,7 +129,7 @@
             </tr>
           </table>
         </div>
-        <!--分页 end-->
+        -->
     </div>
    </div>
   <div class="clearfloat"></div>  
