@@ -74,7 +74,7 @@ class PageHelper {
 
 		// internal pages
 		for($i=$beginPage;$i<=$endPage;++$i)
-			$buttons[]=$this->createPageButton($i+1,$i+1,false,$i==$currentPage,'page');
+			$buttons[]=$this->createPageButton($i+1,$i,false,$i==$currentPage,'page');
 
 		// next page
 		if(($page=$currentPage+1)>=$pageCount-1)

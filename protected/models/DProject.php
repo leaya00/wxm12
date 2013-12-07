@@ -131,7 +131,7 @@ class DProject extends CActiveRecord
 		//总数		
 		$count=Yii::app()->db->createCommand("select count(1) from ($sql) x")->queryScalar();		
 		$result['data']=Yii::app()->db->createCommand($sql.$limit_sql)->queryAll();
-
+		//分页信息
 		Yii::import('application.vendor.*');
 		require_once('pageHelper.php');
 		$mypage=new PageHelper(5,$count,$currentPage,$pageSize);

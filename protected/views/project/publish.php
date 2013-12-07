@@ -21,7 +21,15 @@
                     content: "required",
                     state: "required",
             				promoterType:"required"
-            			}  
+            			},
+                  errorPlacement: function (error, element) { //指定错误信息位置
+                      if (element.is(':radio') || element.is(':checkbox')) {
+                          var eid = element.attr('name');
+                          error.appendTo(element.parent());
+                      } else {
+                          error.insertAfter(element);
+                     }
+                 } 
             	});
             	 
             });
@@ -70,13 +78,11 @@
     	<p>
     	<?php foreach ($stateDict as $item) {
     		?>
-    		 <label>
-          <input type="radio" name="state" value="<?php echo $item->dcode?>" id="RadioGroup1_0" /><?php echo $item->dname?></label>
+          <input type="radio" name="state" value="<?php echo $item->dcode?>"  /><?php echo $item->dname?>
     		<?php 
     	}?>
        
         
-        <br />
       </p>
 	</td>
    </tr>
@@ -86,12 +92,10 @@
       <p>
        <?php foreach ($orgtypeDict as $item) {
     		?>
-    		 <label>
           <input type="radio"  name="promoterType" value="<?php echo $item->dcode?>" /><?php echo $item->dname?>
-        </label>
     		<?php 
     	}?>
-        <br />
+        
       </p></td>
   </tr>
   <tr>

@@ -2,9 +2,9 @@
  <div class="banner">
  <div class="banner_all">
   <div class="banner_info">
-   <a href="<?php echo $this->createUrl('/pm'); ?>"><div class="fabu"></div></a>
-   <a href="#"><div class="canjia"></div></a>
-   <a href="#"><div class="baoming"></div></a>
+   <a href="<?php echo $this->createUrl('pm/publish'); ?>"><div class="fabu"></div></a>
+   <a href="<?php echo $this->createUrl('site/project_list'); ?>"><div class="canjia"></div></a>
+   <a href="<?php echo $this->createUrl('site/project_list'); ?>"><div class="baoming"></div></a>
   </div>
  </div>
  </div>
@@ -44,53 +44,24 @@
       <li class="mlist06"><span>截至时间</span></li>
       <li class="mlist07"><span>我要参与</span></li>
       </ul>
-      <ul class="jp_list">
-       <li class="mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="mlist03"><span>李小二</span></li>
-       <li class="mlist04"><span>123</span></li>
-       <li class="mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="mlist06"><span>2013-11-30</span></li>
-       <li class="mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-       </ul>
-      <ul class="jp_list">
-       <li class="mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="mlist03"><span>李小二</span></li>
-       <li class="mlist04"><span>123</span></li>
-       <li class="mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="mlist06"><span>2013-11-30</span></li>
-       <li class="mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-      </ul>
-      <ul class="jp_list">
-       <li class="mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="mlist03"><span>李小二</span></li>
-       <li class="mlist04"><span>123</span></li>
-       <li class="mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="mlist06"><span>2013-11-30</span></li>
-      <li class="mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-      </ul>
-      <ul class="jp_list">
-       <li class="mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="mlist03"><span>李小二</span></li>
-       <li class="mlist04"><span>123</span></li>
-       <li class="mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="mlist06"><span>2013-11-30</span></li>
-       <li class="mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-      </ul>
-      <ul class="jp_list">
-       <li class="mlist01"><a href="#" class="blue_color">01016 </a></li>
-       <li class="mlist02"><span class="org_color">创新创业工作坊项目一 </span></li>
-       <li class="mlist03"><span>李小二</span></li>
-       <li class="mlist04"><span>123</span></li>
-       <li class="mlist05"><span>要求内容，对参赛者的特殊要求内容...</span></li>
-       <li class="mlist06"><span>2013-11-30</span></li>
-       <li class="mlist07"><a href="#" class="chakan">查看详情</a><a href="#" class="chakan">马上参加</a></li>
-      </ul>
+      <?php 
+      foreach($project_list['data'] as $item){
+    ?>
+    <ul class="jp_list">
+       <li class="mlist01"><a href="#" class="blue_color"><?php echo $item['number'];?> </a></li>
+       <li class="mlist02"><span class="org_color"><?php echo $item['name'];?>  </span></li>
+       <li class="mlist03"><span><?php echo $item['promoterName'];?> </span></li>
+       <li class="mlist04"><span><?php echo $item['personCount'];?></span></li>
+       <li class="mlist05"><span><?php echo $item['demand'];?></span></li>
+       <li class="mlist06"><span><?php echo date('Y-m-d',strtotime($item['lastdate']));?></span></li>
+       <li class="mlist07">
+          <a href="<?php echo $this->createUrl("site/project_detail",array("project_id"=>$item['id']))?>"  target="_blank" class="chakan">查看详情</a>
+          <a href="<?php echo $this->createUrl("project/apply",array("project_id"=>$item['id']))?>" class="chakan">马上参加</a>         
+      </li> 
+    </ul>    
+    <?php }?>
       <div class="show_bottom">
-      <p><a href="#">更多项目+</a></p>
+      <p><a href="<?php echo $this->createUrl('site/project_list'); ?>">更多项目+</a></p>
       </div>
     </div> 
    </div>

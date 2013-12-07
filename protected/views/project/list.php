@@ -61,11 +61,11 @@
        <li class="ny_mlist06"><span><?php echo date('Y-m-d',strtotime($item['lastdate']));?></span></li>
        <li class="ny_mlist07">
           <a href="<?php echo $this->createUrl("site/project_detail",array("project_id"=>$item['id']))?>"  target="_blank" class="chakan">查看详情</a>
-          <a href="#" class="chakan">马上参加</a>         
-      </li>     
+          <a href="<?php echo $this->createUrl("project/apply",array("project_id"=>$item['id']))?>" class="chakan">马上参加</a>         
+      </li>
+    </ul>     
     <?php }?>
      
-     <?php print_r($project_list['page']) ?>
       <!--分页-->
         <div class="msearch_fenye">
           <table width="1000" style="" border="0" cellpadding="0" cellspacing="0">
@@ -77,10 +77,10 @@
                             foreach($project_list['page'] as $item){
                         ?>
                         <?php if($item['type']=='f' && !$item['hidden'] ){?>
-                           <a class="width_60 fenye_home" href="#">首页</a>  
+                           <a class="width_60 fenye_home" href="<?php echo $this->createUrl("site/project_list",array("page"=>$item['page']))?>">首页</a>  
                         <?php }?>
                         <?php if($item['type']=='p' && !$item['hidden'] ){?>
-                            <a class="width_60" href="#">上一页</a> 
+                            <a class="width_60" href="<?php echo $this->createUrl("site/project_list",array("page"=>$item['page']))?>">上一页</a> 
                         <?php }?>
                         <?php if($item['type']=='page' ){
                             if($item['selected']){
@@ -89,13 +89,13 @@
                         <?php
                             }else{
                         ?>
-                           <a href="#"><?php echo $item['label']?></a> 
+                           <a href="<?php echo $this->createUrl("site/project_list",array("page"=>$item['page']))?>"><?php echo $item['label']?></a> 
                         <?php }}?>
                         <?php if($item['type']=='n' && !$item['hidden']){?>
-                           <a class="width_60" href="#">下一页</a> 
+                           <a class="width_60" href="<?php echo $this->createUrl("site/project_list",array("page"=>$item['page']))?>">下一页</a> 
                         <?php }?>
                         <?php if($item['type']=='l' && !$item['hidden']){?>
-                           <a class="width_60" href="#">末页</a>
+                           <a class="width_60" href="<?php echo $this->createUrl("site/project_list",array("page"=>$item['page']))?>">末页</a>
                         <?php }?>
                         <?php }?>
                         

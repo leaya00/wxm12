@@ -8,10 +8,8 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-		$this->render('index');
-		// print_r(DProject::model()->pageingFind("1=1 ",1,2));
-		
-		
+		$project_list=DProject::model()->pageingFind('1=1',0,10);
+		$this->render('index',array('project_list' => $project_list));
 	}
 	
 
@@ -19,9 +17,9 @@ class SiteController extends Controller
 
 
 
-	public function actionProject_list()
+	public function actionProject_list($page=0)
 	{
-		$project_list=DProject::model()->pageingFind('1=1',1,2);
+		$project_list=DProject::model()->pageingFind('1=1',$page,10);
 		$this->render('/project/list',array('project_list' => $project_list));
 	}
 

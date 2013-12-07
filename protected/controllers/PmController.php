@@ -5,7 +5,7 @@
 class PmController extends UserController
 {
 
-	public function actionIndex()
+	public function actionPublish()
 	{
 
 		if(isset($_POST["content"])){
