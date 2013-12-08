@@ -8,8 +8,9 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-		$project_list=DProject::model()->pageingFind('1=1',0,10);
-		$this->render('index',array('project_list' => $project_list));
+		//$project_list=DProject::model()->pageingFind('1=1',0,10);
+		//$this->render('index',array('project_list' => $project_list));
+		Globals::sendMail();
 	}
 	
 

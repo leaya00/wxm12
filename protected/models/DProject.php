@@ -126,7 +126,7 @@ class DProject extends CActiveRecord
 	public function pageingFind($tj,$currentPage,$pageSize){
 		$start=($currentPage)*$pageSize;
 		$limit_sql=" limit $start,$pageSize ";
-		$sql=$this->basesql." where $tj";
+		$sql=$this->basesql." where $tj order by number desc";
 		$result=array();
 		//总数		
 		$count=Yii::app()->db->createCommand("select count(1) from ($sql) x")->queryScalar();		

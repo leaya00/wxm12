@@ -45,4 +45,27 @@ class ProjectController extends UserController
 			}
 		}
 	}
+
+	private function ApplySendMail()
+	{
+		$formname="upload";		
+		if ((($_FILES[$formname]["type"] == "image/gif") || true)
+		&& ($_FILES[$formname]["size"] < 1024*1024)){
+			if ($_FILES[$formname]["error"] > 0){
+				echo "上传错误: " . $_FILES["file"]["error"] . "<br />";
+			}else{
+				//iconv("UTF-8","gb2312", $destfile)
+				$destfile= $_FILES[$formname]["name"];				
+				//注意中文文件名乱码需要转换为gb2312
+				$attfilepath=$_FILES[$formname]["tmp_name"];
+
+				
+				
+			}
+		}else{
+			echo "无效的文件";
+		}
+		
+	}
+
 }
