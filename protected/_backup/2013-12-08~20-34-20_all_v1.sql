@@ -4,7 +4,7 @@
 -- http://www.yanue.net 
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2013 年  12 月 08 日 13:33
+-- 生成日期: 2013 年  12 月 08 日 20:34
 -- MySQL版本: 5.5.27
 -- PHP 版本: 5.4.7
 
@@ -27,6 +27,7 @@ CREATE TABLE `d_applyproject` (
   `email` varchar(50) DEFAULT NULL,
   `describe` varchar(1000) DEFAULT NULL,
   `userid` varchar(36) DEFAULT NULL,
+  `starttime` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -34,7 +35,7 @@ CREATE TABLE `d_applyproject` (
 -- 转存表中的数据 d_applyproject
 --
 
-INSERT INTO `d_applyproject` VALUES('45615fca-5fca-11e3-b7f9-90e6ba57d19d','0','','','','','');
+INSERT INTO `d_applyproject` VALUES('1da0134b-5ffa-11e3-8896-90e6ba57d19d','333','34324','45435','4543@fsdfgsd.com',' sdfsdfsdf','8','2013-12-08 19:15:59');
 --
 -- 表的结构d_dict
 --
@@ -57,7 +58,7 @@ INSERT INTO `d_dict` VALUES('2','0','无效','state');
 INSERT INTO `d_dict` VALUES('3','1','个人','orgtype');
 INSERT INTO `d_dict` VALUES('4','2','团体','orgtype');
 INSERT INTO `d_dict` VALUES('5','3','工作室','orgtype');
-INSERT INTO `d_dict` VALUES('6','19','项目编号','project_num');
+INSERT INTO `d_dict` VALUES('6','21','项目编号','project_num');
 --
 -- 表的结构d_mail
 --
@@ -129,6 +130,8 @@ CREATE TABLE `d_project` (
 INSERT INTO `d_project` VALUES('333','000018','项目1','8','3',' 士大夫似的 士大夫似的 士大夫似的 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-04 20:58:27');
 INSERT INTO `d_project` VALUES('49841a44-5c15-11e3-b6b2-90e6ba57d19d','000018','项目1','8','3',' 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-03 21:12:54');
 INSERT INTO `d_project` VALUES('7d44e1f7-5ce1-11e3-b10c-90e6ba57d19d','000019','项目1','8','12',' 无要求','2013-12-04 00:00:00','2013-12-13 00:00:00','<h1>士大夫<span style=\"color:#a52a2a\">士大夫士</span>大夫士大夫士大夫</h1>\r\n\r\n<p><img alt=\"\" src=\"/wxm/images/upload/Penguins.jpg\" style=\"height:75px; width:100px\" /></p>\r\n','xxxx@ssss.com','1','1','0000-00-00 00:00:00');
+INSERT INTO `d_project` VALUES('d9bb0147-6004-11e3-8896-90e6ba57d19d','000021','sdfsdfsd','8','32',' sdfsdf','2013-12-17 00:00:00','2013-12-26 00:00:00','<p>sdf</p>\r\n','dfsdf@sdfsd.com','1','1','');
+INSERT INTO `d_project` VALUES('ed7adfde-6000-11e3-8896-90e6ba57d19d','000020','dsfsdf','8','12',' dfs','2013-12-08 00:00:00','2013-12-08 00:00:00','<p>sdfsd</p>\r\n','sfsd@xcx.com','1','2','');
 --
 -- 表的结构d_studioinfo
 --
@@ -177,4 +180,4 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- 转存表中的数据 v_uuid
 --
 
-INSERT INTO `v_uuid` VALUES('4e12e2eb-5fca-11e3-b7f9-90e6ba57d19d');
+INSERT INTO `v_uuid` VALUES('0fad1c9e-6005-11e3-8896-90e6ba57d19d');

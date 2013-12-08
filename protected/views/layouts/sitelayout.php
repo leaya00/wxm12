@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>重庆大学创新创业工作坊（首页）</title>
+<title>重庆大学创新创业工作坊</title>
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/style.css" rel="stylesheet" />
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/file.css" rel="stylesheet" />
 

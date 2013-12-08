@@ -11,6 +11,7 @@
  * @property string $email
  * @property string $describe
  * @property string $userid
+ * @property string $starttime
  */
 class DApplyproject extends CActiveRecord
 {
@@ -95,7 +96,9 @@ class DApplyproject extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
+	public function checkApplyToCount($userid,$projectid){
+		return Yii::app()->db->createCommand("select count(1) from d_applyproject where userid='$userid' and projectid='$projectid'")->queryScalar();	
+	}
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

@@ -30,6 +30,8 @@ class PmController extends UserController
 			$project->state=$_POST["state"];
 			
 			$project->save();
+			$this->layout="//layouts/bootstrap_layout";
+			$this->render("/site/success",array("message"=>"项目发布成功！"));
 
 		}else{
 			$stateDict=DDict::model()->findAll('dtype=:dtype', array(':dtype'=>'state'));

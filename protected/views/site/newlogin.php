@@ -5,7 +5,6 @@
 
     <!-- Le styles -->
     <link href="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap-3.0.2/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap-3.0.2/bootstrap-responsive.min.css" rel="stylesheet">
 
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap-3.0.2/bootstrap.min.js"></script>
