@@ -4,7 +4,7 @@
 -- http://www.yanue.net 
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2013 年  12 月 04 日 22:09
+-- 生成日期: 2013 年  12 月 08 日 13:33
 -- MySQL版本: 5.5.27
 -- PHP 版本: 5.4.7
 
@@ -15,24 +15,26 @@
 -- -------------------------------------------------------
 
 --
--- 表的结构d_applyuser
+-- 表的结构d_applyproject
 --
 
-DROP TABLE IF EXISTS `d_applyuser`;
-CREATE TABLE `d_applyuser` (
+DROP TABLE IF EXISTS `d_applyproject`;
+CREATE TABLE `d_applyproject` (
   `id` varchar(36) NOT NULL,
   `projectid` varchar(36) NOT NULL DEFAULT '0',
   `name` varchar(50) DEFAULT NULL,
   `telphone` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `describe` varchar(1000) DEFAULT NULL,
+  `userid` varchar(36) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 d_applyuser
+-- 转存表中的数据 d_applyproject
 --
 
+INSERT INTO `d_applyproject` VALUES('45615fca-5fca-11e3-b7f9-90e6ba57d19d','0','','','','','');
 --
 -- 表的结构d_dict
 --
@@ -126,7 +128,7 @@ CREATE TABLE `d_project` (
 
 INSERT INTO `d_project` VALUES('333','000018','项目1','8','3',' 士大夫似的 士大夫似的 士大夫似的 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-04 20:58:27');
 INSERT INTO `d_project` VALUES('49841a44-5c15-11e3-b6b2-90e6ba57d19d','000018','项目1','8','3',' 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-03 21:12:54');
-INSERT INTO `d_project` VALUES('7d44e1f7-5ce1-11e3-b10c-90e6ba57d19d','000019','项目1','8','12',' 无要求','2013-12-04 00:00:00','2013-12-13 00:00:00','<h1>士大夫<span style=\"color:#a52a2a\">士大夫士</span>大夫士大夫士大夫</h1>\r\n\r\n<p><img alt=\"\" src=\"/wxm/images/upload/Penguins.jpg\" style=\"height:75px; width:100px\" /></p>\r\n','xxxx@ssss.com','1','1','');
+INSERT INTO `d_project` VALUES('7d44e1f7-5ce1-11e3-b10c-90e6ba57d19d','000019','项目1','8','12',' 无要求','2013-12-04 00:00:00','2013-12-13 00:00:00','<h1>士大夫<span style=\"color:#a52a2a\">士大夫士</span>大夫士大夫士大夫</h1>\r\n\r\n<p><img alt=\"\" src=\"/wxm/images/upload/Penguins.jpg\" style=\"height:75px; width:100px\" /></p>\r\n','xxxx@ssss.com','1','1','0000-00-00 00:00:00');
 --
 -- 表的结构d_studioinfo
 --
@@ -175,4 +177,4 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- 转存表中的数据 v_uuid
 --
 
-INSERT INTO `v_uuid` VALUES('a555ddc8-5ced-11e3-b10c-90e6ba57d19d');
+INSERT INTO `v_uuid` VALUES('4e12e2eb-5fca-11e3-b7f9-90e6ba57d19d');

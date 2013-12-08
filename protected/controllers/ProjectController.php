@@ -12,8 +12,10 @@ class ProjectController extends UserController
 	public function actionApply($project_id=-1)
 	{
 		if(isset($_POST["projectid"])){
-
-
+			$dApplyproject=new DApplyproject();
+			//填充uuid
+			$dApplyproject->id=VUuid::model()->find()->uuid;
+			$dApplyproject->save();
 		}else{
 			$project_list=DProject::model()->FindByid($project_id);
 			if(count($project_list)){
