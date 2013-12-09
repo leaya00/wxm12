@@ -8,9 +8,9 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
-		//$project_list=DProject::model()->pageingFind('1=1',0,10);
-		//$this->render('index',array('project_list' => $project_list));
-		Globals::sendMail();
+		$project_list=DProject::model()->pageingFind('1=1',0,10);
+		$this->render('index',array('project_list' => $project_list));
+		//Globals::sendMail();
 	}
 	
 
@@ -53,9 +53,13 @@ class SiteController extends Controller
 	}
 
 
+	public function actionCenter(){
+		$this->render("/manage/user_center");
+	}
 
-
-
+	public function actionSetting(){
+			$this->render("/manage/setting");
+	}
 
 
 

@@ -31,12 +31,14 @@
     <div class="main_all_right_img"></div>
     <div class="ny_lb_zzy">
       <div class="ny_lb_zzy_top">
-       <h2><?php echo $item['name']; ?></h2>
-       <p><?php echo $item['demand']; ?></p>
-       <h3><?php echo $item['number']; ?></h3>
+       <div class="ny_lb_zzy_top_bt"><?php echo $item['name']; ?></div>
+       <div class="ny_lb_zzy_top_wz"><?php echo $item['demand']; ?></div>
+       <div class="ny_lb_zzy_top_bh"><?php echo $item['number']; ?></div>
       </div>
       <div class="ny_lb_zzy_nr">
-       <p>  <?php echo $item['content']; ?></p>
+      	 <div class="ny_lb_zzy_nr_wz"> 
+       		<?php echo $item['content']; ?>
+      	 </div>
       </div>
       <div class="ny_lb_zzy_bottom">
        <ul>

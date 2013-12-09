@@ -6,6 +6,7 @@
 <title>重庆大学创新创业工作坊</title>
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/style.css" rel="stylesheet" />
 <link href="<?php echo Yii::app()->baseUrl; ?>/css/file.css" rel="stylesheet" />
+<link href="<?php echo Yii::app()->baseUrl; ?>/css/deta.css" rel="stylesheet" />
 
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/jquery.SuperSlide.js"></script>
@@ -33,8 +34,8 @@
           	<div class="subnav">
 	            <div class="subnav-inner">
 	              <ul>
-	                <li class=""><a href="#">会员中心</a></li>
-	                <li class=""><a href="#">帐号设置</a></li>
+	                <li class=""><a href="<?php echo $this->createUrl('site/center'); ?>">会员中心</a></li>
+	                <li class=""><a href="<?php echo $this->createUrl('site/setting'); ?>">帐号设置</a></li>
 	                <li class=""><a href="#" onclick="logout('<?php echo Yii::app()->homeUrl?>');">退出</a></li>
 	              </ul>
 	            </div>

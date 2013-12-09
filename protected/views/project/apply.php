@@ -1,3 +1,4 @@
+<link href="<?php echo Yii::app()->baseUrl; ?>/css/file.css" rel="stylesheet" />
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/jquery.validate.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/jquery/validate_message.js"></script>
 <script>

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+/*ǩʽ*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { padding: 0; margin: 0;} 
+table { border-collapse: collapse; border-spacing: 0; } 
+fieldset,img { border: 0; } 
+address,caption,cite,code,dfn,em,strong,th,var { font-weight: normal; font-style: normal; } 
+ol,ul { list-style: none; } 
+caption,th { text-align: left; } 
+a{text-decoration:none; color:#717171;}
+h1,h2,h3,h4,h5,h6 { font-size: 100%; } 
+body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; padding:0; background:#FFF; color:#999;}
+.clearfloat{height: 1px;line-height:1px;font-size: 1px;clear: both;margin-top: -1px;}
+/*ǩʽ*/
+
+/*----项目最终页------*/
+.guangao{ margin-top:20px;}
+.ny_lb_zzy{ width:924px; float:left;color:#999; margin-top:10px;}
+.ny_lb_zzy_top biaoti{ font-size:16px; line-height:24px; color:#666; float:left;}
+.ny_lb_zzy_top_bt{ font-size:16px; font-weight:600;}
+.ny_lb_zzy_top_wz{ line-height:24px;}
+.ny_lb_zzy_top_bh{ width:100px; line-height:24px; background:#d9d9d9; padding:0px 0px 0px 10px; color:#FFF;}
+.ny_lb_zzy_nr{ width:924px; float:left;color:#999999; margin-top:10px; line-height:24px;}
+.ny_lb_zzy_bottom{float:left; line-height:24px;}
+.ny_lb_zzy_bottom li{ margin-top:5px;}
+.ny_lb_zzy_bottom samp{ background:#999; width:60px; height:22px; float:left; padding:0px 0px 0px 5px; margin-right:10px; color:#FFF; font-weight:bold;}
+.ny_lb_zzy_bottom_img{ margin-top:10px;}
+
+main_all_left_bt{font-size:16px; font-family:"微软雅黑"; color:#0099cc;}
+.main_all_left_ny{ width:206px; float:left; margin-top:10px; margin-bottom:20px;}
+.main_all_left_news{ width:206px; color:#999; margin-top:10px; float:left;}
+.left_news_all{ width:206px; background:#ababab; color:#FFF; line-height:24px; float:left;}
+.left_news_all h3{ margin-left:10px; font-size:14px;}
+.left_news_info{ width:206px; background:#f0f0f0; float:left;}
+.left_news_info ul{ margin:10px;}
+.left_news_info li{ line-height:24px;}
+.left_news_info li a:hover{ color:#0066cb;}
+.left_news_bottom{width:206px; height:28px;float:left; background:url(../images/ny_pic01.jpg) no-repeat;}
+.left_news_bottom a{ line-height:28px; float:right; margin-right:2px;}
+.left_news_bottom a:hover{ color:#0066cb;}
+.ny_lb_xwlb{ width:924px; height:38px; border-bottom:1px solid #CCC;}
+.ny_lb_xwlb li{ line-height:38px; width:462px; float:left;}
+.ny_lb_xwlb li:hover{ background:#99ccff;}
+.ny_lb_xwlb li a{ padding-left:10px;line-height:38px; width:462px; height:38px;}
+.ny_lb_xwlb li a:hover{ color:#FFF;}
+.ny_lb_xwlb samp{ float:right; padding-right:10px;}
+
+.ny_lb_xwzzy_top{ float:left; margin-top:10px;}
+.ny_lb_xwzzy_top h2{ font-size:16px; line-height:24px; color:#666; }
+.ny_lb_xwzzy_top p{ line-height:24px;}
+.ny_lb_xwzzy_top ul{ width:300px; height:24px; line-height:24px; background:#d9d9d9; color:#FFF;}
+.ny_lb_xwzzy_top ul li{ width:130px; float:left; margin-left:10px;}
+.ny_lb_xwzzy_nr{ width:924px; float:left;color:#999; margin-top:10px; line-height:24px;}
+.ny_lb_xwzzy_fy{ color:#999; width:924px; float:left; margin-top:20px;}
+.ny_lb_xwzzy_fy a:hover{ color:#0066cb;}
+.ny_lb_xwzzy_fy li{ float:left; width:462px;}
+.xwzzy_fy_02{ text-align:right;}
+
+.main_studio{width:1182px;margin:0 auto; color:#FFF;}
+.main_studio_top{ color:#999;}
+.main_studio_top_biaoti{ font-size:16px; color:#666; margin-top:10px; font-weight:600;}
+.main_studio_top_nr{ line-height:24px;}
+.main_studio_lb{ width:1182px; float:left; margin-top:20px;}
+.main_studio_lb li{ width:196px; height:222px; border:1px solid #CCC; float:left; margin:0px 15px 15px 15px;}
+.studio_lb_nr_all{ width:176px; margin:10px; color:#999;}
+
+.main_studio_top ul{ float:left; margin-top:5px;}
+.studio_top_fw{ width:66px;background:#999; color:#FFF; text-align:center; line-height:20px; float:left;}
+.studio_top_fwnr{ width:66px;background:#ccc; color:#FFF; text-align:center; line-height:20px; margin-left:10px; float:left;}
+.studio_nr{ width:1182px; float:left;color:#999; margin-top:10px; line-height:24px;}
+.main_studio_info{ width:1182px; margin:10px  0px 30px 0px;float:left;}
+.studio_cyzs{ width:66px;background:#999; color:#FFF; text-align:center; line-height:20px; margin-bottom:10px;}
+.studio_cyzs_nr{ width:221px; text-align:center; float:left; margin:0px 6px 0px 6px;}
+.studio_cyzs_nr_img{ border:1px solid #CCC;}
+.studio_cyzs_nr_mz{ line-height:36px;}
+
+.banquan_ny{ width:1182px; float:left;}
+.banquan_ny_bq{ line-height:24px; color:#999;}

@@ -44,8 +44,8 @@ body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; paddin
 .ny_lb_xwlb samp{ float:right; padding-right:10px;}
 
 .ny_lb_xwzzy_top{ float:left; margin-top:10px;}
-.ny_lb_xwzzy_top h2{ font-size:16px; line-height:24px; color:#666; }
-.ny_lb_xwzzy_top p{ line-height:24px;}
+.ny_lb_xwzzy_top_bt{ font-size:16px; line-height:24px; color:#666; font-weight:600;}
+.ny_lb_xwzzy_nr_wz{ line-height:24px;}
 .ny_lb_xwzzy_top ul{ width:300px; height:24px; line-height:24px; background:#d9d9d9; color:#FFF;}
 .ny_lb_xwzzy_top ul li{ width:130px; float:left; margin-left:10px;}
 .ny_lb_xwzzy_nr{ width:924px; float:left;color:#999; margin-top:10px; line-height:24px;}
@@ -145,7 +145,7 @@ body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; paddin
 .renshu{height:33px; border:#CCC 1px solid; width:114px; line-height:33px;}
 .youxiang{height:33px; border:#CCC 1px solid; width:244px; line-height:33px;}
 .zhuangtai{height:33px; border:#CCC 1px solid; width:244px;}
-.hdfabu{width:114px; height:27px; border:1px #96b1e0 solid; background:url(../images/line.jpg) repeat-x; float:left; margin-left:93px;}
+.hdfabu{width:114px; height:27px; border:1px #96b1e0 solid; background:url(../images/line.jpg) repeat-x; float:left; margin-left:94px;}
 .xueyuan{height:33px; border:#CCC 1px solid; width:244px; line-height:33px; margin-bottom:10px;}
 .zwms{width:410px; height:200px; border:#CCC 1px solid; margin-bottom:20px;}
 .fujian{height:33px; border:#CCC 1px solid; width:244px; background:#FFF; margin-bottom:10px;}
@@ -181,3 +181,37 @@ body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; paddin
 .members_zjyxx_sc img{ border:1px solid #CCC;}
 .zjyxx_xtp{ width:60px; float:left; margin-left:30px;text-align:center;}
 .zjyxx_sctp{ margin-left:20px; float:left; text-align:center;}
+
+
+/*个人会员中心*/
+.members_fabu_gr{ width:1182px; margin:0 auto; float:left; margin-top:15px; }
+.members_table_header_gr{ width:1182px; float:left; line-height:44px; color:#666;text-align:center; margin-top:10px; border: 1px solid #99ccff; margin-bottom:30px;}
+.members_table_header_gr .members_title_gr { height: 40px; background: #f7f7f7; font-family:"微软雅黑"; font-size:14px; font-weight:bold;}
+.members_table_header_gr .members_title_gr li { text-align: center; float: left; line-height:40px; height: 40px; }
+.members_table_header_gr li.members_mlist01_gr { width: 100px; text-align: center; }
+.members_table_header_gr li.members_mlist02_gr { width: 180px; }
+.members_table_header_gr li.members_mlist03_gr { width: 200px; }
+.members_table_header_gr li.members_mlist04_gr { width: 202px; }
+.members_table_header_gr li.members_mlist05_gr { width: 500px; }
+
+.all_table_header_gr{ width:1182px; float:left; line-height:44px; color:#666;text-align:center; margin-top:10px; border: 1px solid #99ccff; margin-bottom:20px;}
+.all_table_header_gr .all_title_gr { height: 40px; background: #f7f7f7; font-family:"微软雅黑"; font-size:14px; font-weight:bold;}
+.all_table_header_gr .all_title_gr li { text-align: center; float: left; line-height:40px; height: 40px; }
+.all_table_header_gr li.all_mlist01_gr { width: 100px; text-align: center; }
+.all_table_header_gr li.all_mlist02_gr { width: 180px; }
+.all_table_header_gr li.all_mlist03_gr { width: 200px; }
+.all_table_header_gr li.all_mlist04_gr { width: 102px; }
+.all_table_header_gr li.all_mlist05_gr { width: 450px; }
+.all_table_header_gr li.all_mlist06_gr { width: 150px; }
+
+.all_jp_list_gr { height: 46px; border-bottom: 1px dashed #ccc;}
+.all_jp_con_box_gr .all_jp_list_gr li.ny_mlist01_gr { width: 50px; text-align: left; }
+.all_jp_con_box_gr .all_jp_list_gr li.ny_mlist05_gr { width: 100px; text-align: left; }
+.all_jp_list_gr li { text-align: center; float: left; line-height: 46px; height: 46px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.all_jp_list_gr li span.org_color_gr { color: #ff0000; display: block; height: 46px; width: 90px; margin: 0 auto; background: url(../images/up_arrow.gif) right center no-repeat; }
+.all_jp_list_gr .all_mlist06_gr{ color:#F00;}
+
+.members_title_xx_gr{text-align:left;}
+.members_title_xx_gr li{ margin-left:20px; border-bottom:1px dashed #CCC; line-height:40px;}
+.members_title_xx_gr samp{ float:right; margin-right:20px; color:#999;}
+/*个人会员中心结束*/
