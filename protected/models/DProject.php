@@ -112,10 +112,11 @@ class DProject extends CActiveRecord
 	}
 
 	private $basesql="select
-		 d_project.*,d_user.username as promoterName,d_dict.dname as  promoterTypeName
+		 d_applyproject.id as applyid,d_project.*,d_user.username as promoterName,d_dict.dname as  promoterTypeName
 		 from d_project
 		 left join d_user on d_project.promoter=d_user.id
-		  left join d_dict on d_project.promoterType=d_dict.dcode and d_dict.dtype='orgtype' ";
+		  left join d_dict on d_project.promoterType=d_dict.dcode and d_dict.dtype='orgtype' 
+		  left join d_applyproject on d_applyproject.projectid=d_project.id";
 	public function pageFind($tj="1=1"){
 		$sql=$this->basesql." where $tj";
 		return Yii::app()->db->createCommand($sql)->queryAll();
@@ -140,7 +141,7 @@ class DProject extends CActiveRecord
 		return $result;
 	}
 	public function FindByid($id){
-		$sql=$this->basesql."where d_project.id=:id";
+		$sql=$this->basesql." where d_project.id=:id";
 		$command= Yii::app()->db->createCommand($sql);
 		$command->bindParam(":id",$id,PDO::PARAM_STR);
 		return $command->queryAll();
