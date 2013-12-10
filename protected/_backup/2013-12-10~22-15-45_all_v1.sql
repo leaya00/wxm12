@@ -4,7 +4,7 @@
 -- http://www.yanue.net 
 --
 -- 主机: 127.0.0.1
--- 生成日期: 2013 年  12 月 08 日 21:46
+-- 生成日期: 2013 年  12 月 10 日 22:15
 -- MySQL版本: 5.5.27
 -- PHP 版本: 5.4.7
 
@@ -35,7 +35,8 @@ CREATE TABLE `d_applyproject` (
 -- 转存表中的数据 d_applyproject
 --
 
-INSERT INTO `d_applyproject` VALUES('1da0134b-5ffa-11e3-8896-90e6ba57d19d','333','34324','45435','4543@fsdfgsd.com',' sdfsdfsdf','8','2013-12-08 19:15:59');
+INSERT INTO `d_applyproject` VALUES('1cd94268-61a1-11e3-ad7b-90e6ba57d19d','7d44e1f7-5ce1-11e3-b10c-90e6ba57d19d','sdfsdf','','',' ','8','2013-12-10 21:43:56');
+INSERT INTO `d_applyproject` VALUES('3e07fb79-61a1-11e3-ad7b-90e6ba57d19d','40d0babf-6194-11e3-ad7b-90e6ba57d19d','','','',' ','8','2013-12-10 21:44:51');
 --
 -- 表的结构d_dict
 --
@@ -58,7 +59,7 @@ INSERT INTO `d_dict` VALUES('2','0','无效','state');
 INSERT INTO `d_dict` VALUES('3','1','个人','orgtype');
 INSERT INTO `d_dict` VALUES('4','2','团体','orgtype');
 INSERT INTO `d_dict` VALUES('5','3','工作室','orgtype');
-INSERT INTO `d_dict` VALUES('6','22','项目编号','project_num');
+INSERT INTO `d_dict` VALUES('6','23','项目编号','project_num');
 --
 -- 表的结构d_mail
 --
@@ -128,6 +129,7 @@ CREATE TABLE `d_project` (
 --
 
 INSERT INTO `d_project` VALUES('333','000018','项目1','8','3',' 士大夫似的 士大夫似的 士大夫似的 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-04 20:58:27');
+INSERT INTO `d_project` VALUES('40d0babf-6194-11e3-ad7b-90e6ba57d19d','000023','我的测试项目','8','12','sdfsdfsdf','2013-12-02 00:00:00','2013-12-18 00:00:00','<p>sdfsdfsd</p>\r\n','sdfd@xc.com','1','2','');
 INSERT INTO `d_project` VALUES('49841a44-5c15-11e3-b6b2-90e6ba57d19d','000017','项目1','8','3',' 士大夫似的','2013-12-03 00:00:00','2013-12-13 00:00:00','<p>士大夫似的</p>\r\n','xx@xxcv.com','1','2','2013-12-08 20:57:06');
 INSERT INTO `d_project` VALUES('7d44e1f7-5ce1-11e3-b10c-90e6ba57d19d','000019','项目1','8','12',' 无要求','2013-12-04 00:00:00','2013-12-13 00:00:00','<h1>士大夫<span style=\"color:#a52a2a\">士大夫士</span>大夫士大夫士大夫</h1>\r\n\r\n<p><img alt=\"\" src=\"/wxm/images/upload/Penguins.jpg\" style=\"height:75px; width:100px\" /></p>\r\n','xxxx@ssss.com','1','1','0000-00-00 00:00:00');
 INSERT INTO `d_project` VALUES('b1f46a2e-6007-11e3-8896-90e6ba57d19d','000022','123','8','123',' sdfsdf','2013-12-08 00:00:00','2013-12-19 00:00:00','<h1>我的大标题<img alt=\"\" src=\"/wxm/images/upload/1_Koala.jpg\" style=\"height:150px; width:192px\" /></h1>\r\n\r\n<p>小标题</p>\r\n\r\n<p>图片</p>\r\n','sdfsdf@sss.com','1','1','');
@@ -181,4 +183,4 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- 转存表中的数据 v_uuid
 --
 
-INSERT INTO `v_uuid` VALUES('175f9f06-600f-11e3-aebd-90e6ba57d19d');
+INSERT INTO `v_uuid` VALUES('8f96b6db-61a5-11e3-ad7b-90e6ba57d19d');
