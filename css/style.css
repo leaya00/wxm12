@@ -204,7 +204,7 @@ body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; paddin
 .news_all_gs samp{ float:right;}
 .news_all_gs samp a:hover{ color:#0099cc;}
 
-.pub_clear{cleat:both;font-size:0px;height:30px;}
+.pub_clear{clean:both;font-size:0px;height:30px;}
 .link{ width:100%; margin:0 auto; background:url(../images/link_bg.jpg) repeat-x; height:48px; float:left; }
 .link_all{ width:1182px; height:48px; margin:0 auto; }
 .link_all li{ float:left; width:55px; margin:10px 20px 10px 20px; line-height:27px; margin-top:10px;}
@@ -227,7 +227,7 @@ body{ font-family: '',arial,verdana,sans-serif; font-size:12px; margin:0; paddin
 .picList .title h3{ height:20px; color:#069;} 
 .picList .title samp{ float:right;}
 .picList .title samp a:hover{ color:#039;}
-./* 多个左滚动 - 公用类 */ 
+/* 多个左滚动 - 公用类 */ 
 .leftLoop{ overflow:hidden; position:relative;  border:1px solid #ccc;} 
 .leftLoop .hd{ overflow:hidden;  height:30px; background:#f4f4f4;  } 
 .leftLoop .hd .prev,.leftLoop .hd .next{ display:block;  width:5px; height:9px; line-height:10px; float:right; margin-right:10px; margin-top:10px;  overflow:hidden; cursor:pointer; background:url("demoEffect/images/icoLeft.gif") no-repeat;} 

@@ -61,7 +61,6 @@
        <li class="ny_mlist06"><span><?php echo date('Y-m-d',strtotime($item['lastdate']));?></span></li>
        <li class="ny_mlist07">
           <a href="<?php echo $this->createUrl("site/project_detail",array("project_id"=>$item['id']))?>"  target="_blank" class="chakan">查看详情</a>
-          
            <?php if($item['applyid']==null){?>
           	<a href="<?php echo $this->createUrl("project/apply",array("project_id"=>$item['id']))?>" class="chakan">马上参加</a>
           <?php }else{?>

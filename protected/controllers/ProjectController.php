@@ -4,7 +4,7 @@
  */
 class ProjectController extends UserController
 {
-	
+
 	public function actionIndex()
 	{
 		$this->layout="//layouts/bootstrap_layout";
@@ -29,10 +29,35 @@ class ProjectController extends UserController
 			$dApplyproject->userid=Yii::app()->user->id;
 			//CDbExpression 类型的属性值会被直接投入相应的SQL语句 而不转义
 			$dApplyproject->starttime=new CDbExpression('NOW()');
-			$dApplyproject->save();
-			//发送邮件
-			$this->layout="//layouts/bootstrap_layout";
-			$this->render("/site/success",array("message"=>"您成功参加了项目！"));
+
+			//附件处理
+			if(isset($_FILES["file"])){
+				list($re,$path,$filename)=$this->ApplySendMail();
+			}else{
+				$re=null;
+				$path=null;
+				$filename=null;
+			}			
+			if($re!=null){
+				$this->layout="//layouts/bootstrap_layout";
+				$this->render("/site/success",array("message"=>$re));
+			}else{
+				$destmail=DProject::model()->find('id=:id',array(":id"=>$dApplyproject->projectid))->email;				
+				$title="***参加了你的项目***";
+				$content="ccccccc";
+				//发送邮件
+//				$mailre=Globals::sendMail($title,$content,$destmail,$path,$filename);
+				$mailre=true;				
+				if(!$mailre){
+					$this->layout="//layouts/bootstrap_layout";
+					$this->render("/site/success",array("message"=>"$mailre"));
+					return;
+				}else{
+					$dApplyproject->save();
+					$this->layout="//layouts/bootstrap_layout";
+					$this->render("/site/success",array("message"=>"你成功参加了项目"));
+				}
+			}
 		}else{
 			$project_list=DProject::model()->FindByid($project_id);
 			//判断用户是否已经参加了
@@ -48,24 +73,22 @@ class ProjectController extends UserController
 
 	private function ApplySendMail()
 	{
-		$formname="upload";		
+		$msg=null;
+		$formname="userfile";
+		
 		if ((($_FILES[$formname]["type"] == "image/gif") || true)
 		&& ($_FILES[$formname]["size"] < 1024*1024)){
 			if ($_FILES[$formname]["error"] > 0){
-				echo "上传错误: " . $_FILES["file"]["error"] . "<br />";
+				$msg="上传错误: " . $_FILES["file"]["error"] . "<br />";
 			}else{
-				//iconv("UTF-8","gb2312", $destfile)
-				$destfile= $_FILES[$formname]["name"];				
+				$destfile= $_FILES[$formname]["name"];
 				//注意中文文件名乱码需要转换为gb2312
 				$attfilepath=$_FILES[$formname]["tmp_name"];
-
-				
-				
 			}
 		}else{
-			echo "无效的文件";
+			$msg="无效的文件";
 		}
-		
+		return array($msg,$attfilepath,$destfile);
 	}
 
 }
